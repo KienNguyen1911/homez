@@ -185,7 +185,7 @@
                                                     class="flaticon-protection mr10"></i>My Package</a> --}}
                                             <a class="dropdown-item" href="page-dashboard-profile.html"><i
                                                     class="flaticon-user mr10"></i>My Profile</a>
-                                            <a class="dropdown-item" href="page-login.html"><i
+                                            <a class="dropdown-item" href="{{ route('logout') }}"><i
                                                     class="flaticon-exit mr10"></i>Logout</a>
                                         </div>
                                     </div>
