@@ -56,24 +56,27 @@
                 <h2>Sign in</h2>
                 <p class="text">Sign in with this account across the following sites.</p>
               </div>
-              <div class="mb25">
-                <label class="form-label fw600 dark-color">Email</label>
-                <input type="email" class="form-control" placeholder="Enter Email">
-              </div>
-              <div class="mb15">
-                <label class="form-label fw600 dark-color">Password</label>
-                <input type="text" class="form-control" placeholder="Enter Password">
-              </div>
-              {{-- <div class="checkbox-style1 d-block d-sm-flex align-items-center justify-content-between mb10">
-                <label class="custom_checkbox fz14 ff-heading">Remember me
-                  <input type="checkbox" checked="checked">
-                  <span class="checkmark"></span>
-                </label>
-                <a class="fz14 ff-heading" href="#">Lost your password?</a>
-              </div> --}}
-              {{-- <div class="d-grid mb20">
-                <button class="ud-btn btn-thm" type="button">Sign in <i class="fal fa-arrow-right-long"></i></button>
-              </div> --}}
+              <form action="{{ route('login') }}" method="post">
+                @csrf
+                <div class="mb25">
+                  <label class="form-label fw600 dark-color">Email</label>
+                  <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                </div>
+                <div class="mb15">
+                  <label class="form-label fw600 dark-color">Password</label>
+                  <input type="text" class="form-control" name="password" placeholder="Enter Password">
+                </div>
+                {{-- <div class="checkbox-style1 d-block d-sm-flex align-items-center justify-content-between mb10">
+                  <label class="custom_checkbox fz14 ff-heading">Remember me
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                  <a class="fz14 ff-heading" href="#">Lost your password?</a>
+                </div> --}}
+                <div class="d-grid mb20">
+                  <button class="ud-btn btn-thm" type="submit">Sign in <i class="fal fa-arrow-right-long"></i></button>
+                </div>
+              </form>
               {{-- <div class="hr_content mb20"><hr><span class="hr_top_text">OR</span></div>
               <div class="d-grid mb10">
                 <button class="ud-btn btn-white fw400" type="button"><i class="fab fa-google"></i> Continue Google</button>
