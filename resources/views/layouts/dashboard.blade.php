@@ -35,6 +35,9 @@
     <link href="images/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
     <link href="images/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
     <link href="images/apple-touch-icon-180x180.png" sizes="180x180" rel="apple-touch-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -97,6 +100,7 @@
         </div>
         <a class="scrollToHome" href="#"><i class="fas fa-angle-up"></i></a>
     </div>
+    @stack('script')
     <!-- Wrapper End -->
     <script src="{{ asset('./js/jquery-3.6.4.min.js') }}"></script>
     <script src="{{ asset('./js/jquery-migrate-3.0.0.min.js') }}"></script>
