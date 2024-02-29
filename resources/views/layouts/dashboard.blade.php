@@ -10,21 +10,21 @@
     <meta name="description" content="Homez - Real Estate HTML Template">
     <meta name="CreativeLayers" content="ATFN">
     <!-- css file -->
-    <link rel="stylesheet" href="{{ asset('./css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('./css/ace-responsive-menu.css') }}">
-    <link rel="stylesheet" href="{{ asset('./css/menu.css') }}">
-    <link rel="stylesheet" href="{{ asset('./css/fontawesome.css') }}">
-    <link rel="stylesheet" href="{{ asset('./css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('./css/bootstrap-select.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('./css/ud-custom-spacing.css') }}">
-    <link rel="stylesheet" href="{{ asset('./css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('./css/slider.css') }}">
-    <link rel="stylesheet" href="{{ asset('./css/jquery-ui.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('./css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('./css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('./css/dashbord_navitaion.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ace-responsive-menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ud-custom-spacing.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dashbord_navitaion.css') }}">
     <!-- Responsive stylesheet -->
-    <link rel="stylesheet" href="{{ asset('./css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!-- Title -->
     <title>Homez - Real Estate HTML Template</title>
     <!-- Favicon -->
@@ -102,19 +102,19 @@
     </div>
     @stack('script')
     <!-- Wrapper End -->
-    <script src="{{ asset('./js/jquery-3.6.4.min.js') }}"></script>
-    <script src="{{ asset('./js/jquery-migrate-3.0.0.min.js') }}"></script>
-    <script src="{{ asset('./js/popper.min.js') }}"></script>
-    <script src="{{ asset('./js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('./js/bootstrap-select.min.js') }}"></script>
-    <script src="{{ asset('./js/jquery.mmenu.all.js') }}"></script>
-    <script src="{{ asset('./js/ace-responsive-menu.js') }}"></script>
-    <script src="{{ asset('./js/chart.min.js') }}"></script>
-    <script src="{{ asset('./js/chart-custome.js') }}"></script>
-    <script src="{{ asset('./js/jquery-scrolltofixed-min.js') }}"></script>
-    <script src="{{ asset('./js/dashboard-script.js') }}"></script>
+    <script src="{{ asset('js/jquery-3.6.4.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-migrate-3.0.0.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.mmenu.all.js') }}"></script>
+    <script src="{{ asset('js/ace-responsive-menu.js') }}"></script>
+    <script src="{{ asset('js/chart.min.js') }}"></script>
+    <script src="{{ asset('js/chart-custome.js') }}"></script>
+    <script src="{{ asset('js/jquery-scrolltofixed-min.js') }}"></script>
+    <script src="{{ asset('js/dashboard-script.js') }}"></script>
     <!-- Custom script for all pages -->
-    <script src="{{ asset('./js/script.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 
 <!-- Mirrored from creativelayers.net/themes/homez-html/page-dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Feb 2024 11:49:05 GMT -->
