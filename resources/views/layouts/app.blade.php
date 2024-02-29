@@ -10,19 +10,19 @@
     <meta name="description" content="Homez">
     <meta name="CreativeLayers" content="ATFN">
     <!-- css file -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/jquery-ui.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/ace-responsive-menu.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-select.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/ud-custom-spacing.css') }}">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/ace-responsive-menu.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ud-custom-spacing.css">
     <!-- Responsive stylesheet -->
-    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    <link rel="stylesheet" href="css/responsive.css">
     <!-- Title -->
     <title>Homez | @yield('title')</title>
     <!-- Favicon -->

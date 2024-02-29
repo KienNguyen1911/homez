@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
-<!-- Mirrored from creativelayers.net/themes/homez-html/page-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Feb 2024 11:49:42 GMT -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,7 +86,7 @@
               <div class="d-grid mb20">
                 <button class="ud-btn btn-apple fw400" type="button"><i class="fab fa-apple"></i> Continue Apple</button>
               </div> --}}
-              <p class="dark-color text-center mb0 mt10">Not signed up? <a class="dark-color fw600" href="page-register.html">Create an account.</a></p>
+              <p class="dark-color text-center mb0 mt10">Not signed up? <a class="dark-color fw600" href="">Create an account.</a></p>
             </div>
           </div>
         </div>
@@ -107,5 +106,4 @@
 <script src="js/script.js"></script>
 </body>
 
-<!-- Mirrored from creativelayers.net/themes/homez-html/page-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Feb 2024 11:49:42 GMT -->
 </html>

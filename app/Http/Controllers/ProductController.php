@@ -66,8 +66,9 @@ class ProductController extends Controller
             
             Product::create($data);
             DB::commit();
-            return redirect()->route('admin.products.index');
+            return redirect()->route('admin.products.index')->with('success', 'Create product successfully!');
         } catch (\Throwable $th) {
+            return redirect()->route('admin.products.index')->with('error', 'Create product failed!');
             DB::rollBack();
             throw $th;
         }

@@ -7,9 +7,9 @@
                   <div class="col-auto">
                       <div class="d-flex align-items-center justify-content-between">
                           <div class="logos mr40 mr10-lg">
-                              <a class="header-logo logo2" href="index-2.html"><img src="images/header-logo2.svg"
+                              <a class="header-logo logo2" href=""><img src="images/header-logo2.svg"
                                       alt="Header Logo"></a>
-                              <a class="header-logo logo1" href="index-2.html"><img src="images/header-logo2.svg"
+                              <a class="header-logo logo1" href=""><img src="images/header-logo2.svg"
                                       alt="Header Logo"></a>
                           </div>
                           <!-- Responsive Menu Structure-->
@@ -37,7 +37,7 @@
                           <a class="login-info d-flex align-items-center" data-bs-toggle="modal"
                               href="#exampleModalToggle" role="button"><i class="far fa-user-circle fz16 me-2"></i>
                               <span class="d-none d-xl-block">Login / Register</span></a>
-                          <a class="ud-btn btn-dark mx-2 mx-xl-4" href="page-dashboard-add-property.html">Add Property<i
+                          <a class="ud-btn btn-dark mx-2 mx-xl-4" href="{{ route('admin.products.create') }}">Add Property<i
                                   class="fal fa-arrow-right-long"></i></a>
                           <a class="sidemenu-btn filter-btn-right" href="#"><img
                                   src="images/icon/nav-icon-dark.svg" alt=""></a>

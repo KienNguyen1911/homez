@@ -60,7 +60,7 @@
                                                 Continue Apple</button>
                                         </div>
                                         <p class="dark-color text-center mb0 mt10">Not signed up? <a
-                                                class="dark-color fw600" href="page-register.html">Create an
+                                                class="dark-color fw600" href="">Create an
                                                 account.</a></p>
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@
                                                     class="fab fa-apple"></i> Continue Apple</button>
                                         </div>
                                         <p class="dark-color text-center mb0 mt10">Not signed up? <a
-                                                class="dark-color fw600" href="page-register.html">Create an
+                                                class="dark-color fw600" href="">Create an
                                                 account.</a></p>
                                     </div>
                                 </div>
