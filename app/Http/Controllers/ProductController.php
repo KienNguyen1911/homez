@@ -66,9 +66,11 @@ class ProductController extends Controller
             
             Product::create($data);
             DB::commit();
-            return redirect()->route('admin.products.index')->with('success', 'Create product successfully!');
+            toastr()->success('Data has been saved successfully!');
+            return redirect()->route('admin.products.index');
         } catch (\Throwable $th) {
-            return redirect()->route('admin.products.index')->with('error', 'Create product failed!');
+            toastr()->error('Data has not been saved successfully!');
+            return redirect()->route('admin.products.index');
             DB::rollBack();
             throw $th;
         }
