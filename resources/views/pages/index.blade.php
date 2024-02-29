@@ -1,10 +1,71 @@
 @extends('layouts.app')
 
-@section('title', __('Homez'))
+@section('title', __('T-Dolphin'))
 
 @section('content')
+    <section class="py-4" style="border-bottom: 1px solid rgba(24, 26, 32)">
+        <div class="container">
+            <div class="row">
+                {{-- logo | info | email --}}
+                <div class="col-md-3 col-lg-3 col-sm-6 element">
+                    <div class="home3-logo">
+                        <a href="{{ route('home') }}">
+                            <h1>
+                                T-Dolphin
+                            </h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 element">
+                    <div class="home3-info">
+                        <div class="d-flex align-items-center justify-content-center gap-3">
+                            <div class="icon-box">
+                                <a href="">
+                                    <span class="flaticon-clock" style="font-size: 30px"></span>
+                                </a>
+                            </div>
+                            <div class="info-content">
+                                <p class="mb-0">Working Hour</p>
+                                <p class="mb-0">09:00 - 21:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 element">
+                    <div class="home3-info">
+                        <div class="d-flex align-items-center justify-content-center gap-3">
+                            <div class="icon-box">
+                                <a href="">
+                                    <span class="flaticon-smartphone" style="font-size: 30px"></span>
+                                </a>
+                            </div>
+                            <div class="info-content">
+                                <p class="mb-0">0968.665.154</p>
+                                <p class="mb-0">info@t-dolphin.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 element">
+                    <div class="home3-info h-100">
+                        <div class="d-flex align-items-center justify-content-end gap-3">
+                            <div class="icon-box">
+                                <a href="">
+                                    <span class="fab fa-facebook-f" style="font-size: 30px"></span>
+                                </a>
+                            </div>
+                            <div class="info-content" style="width: 100px">
+                                <p class="mb-0">View me more</p>
+                                <p class="mb-0">👈👈</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Home Banner Style V1 -->
-    <section class="home-banner-style3 p0">
+    {{-- <section class="home-banner-style3 p0">
         <div class="home-style3">
             <div class="container">
                 <div class="row">
@@ -188,10 +249,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Our Partners -->
-    <section class="our-partners bgc-white">
+    {{-- <section class="our-partners bgc-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 wow fadeInUp">
@@ -230,10 +291,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Explore Apartment -->
-    <section class="pt-0 pb70 pb30-md">
+    {{-- <section class="pt-0 pb70 pb30-md">
         <div class="container">
             <div class="row align-items-md-center wow fadeInUp" data-wow-delay="00ms">
                 <div class="col-lg-9">
@@ -348,10 +409,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Popular Property -->
-    <section class="pb90 pb30-md pt-0">
+    <section class="pb90 pb30-md pt-4">
         <div class="container">
             <div class="row wow fadeInUp" data-wow-delay="00ms">
                 <div class="col-lg-9">
@@ -424,7 +485,7 @@
     </section>
 
     <!-- Explore Apartment -->
-    <section class="pb30-md bgc-dark">
+    {{-- <section class="pb30-md bgc-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto text-center">
@@ -563,7 +624,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Why Chose Us -->
     <section>
@@ -791,101 +852,10 @@
     </section>
 
     <!-- Explore Apartment -->
-    <section class="pb-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-xl-5 wow fadeInRight" data-wow-delay="00ms">
-                    <div class="main-title mb40">
-                        <h2 class="title">Real Estate Inquiry Form</h2>
-                        <p class="paragraph fz15">As the complexity of buildings to increase</p>
-                    </div>
-                    <div class="inquiry-form mb30-md">
-                        <form class="form-style1">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="mb20">
-                                        <label class="form-label fw600 dark-color">Inquiry Type</label>
-                                        <div class="bootselect-multiselect">
-                                            <select class="selectpicker" multiple>
-                                                <option>Apartments</option>
-                                                <option>Bungalow</option>
-                                                <option>Houses</option>
-                                                <option>Loft</option>
-                                                <option>Office</option>
-                                                <option>TownHome</option>
-                                                <option>Villa</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="mb20">
-                                        <label class="form-label fw600 dark-color">Personel Role</label>
-                                        <div class="bootselect-multiselect">
-                                            <select class="selectpicker" multiple>
-                                                <option>Mr.</option>
-                                                <option>Mrs.</option>
-                                                <option>Miss.</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="mb20">
-                                        <label class="form-label fw600 dark-color">Personel Name</label>
-                                        <input type="text" class="form-control" placeholder="Your Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="mb20">
-                                        <label class="form-label fw600 dark-color">Email</label>
-                                        <input type="email" class="form-control"
-                                            placeholder="creativelayers088@gmail.com">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="mb20">
-                                        <label class="form-label fw600 dark-color">How to address you</label>
-                                        <div class="bootselect-multiselect">
-                                            <select class="selectpicker" multiple>
-                                                <option>Mr.</option>
-                                                <option>Mrs.</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb20">
-                                        <label class="form-label fw600 dark-color">Max Price</label>
-                                        <input type="text" class="form-control" placeholder="$90">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb30">
-                                        <label class="form-label fw600 dark-color">Min Size (Sq ft)</label>
-                                        <input type="text" class="form-control" placeholder="20">
-                                    </div>
-                                </div>
-                                <div class="d-grid">
-                                    <button class="ud-btn btn-thm">Submit <i
-                                            class="fal fa-arrow-right-long"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-6 offset-xl-1 wow fadeInLeft" data-wow-delay="300ms">
-                    <div class="inquiry-form">
-                        <div class="inquiry-img"><img class="w-100" src="images/about/about-4.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('components.info-user')
 
     <!-- Explore Apartment -->
-    <section class="mb35 mb0-md pb30-md">
+    {{-- <section class="mb35 mb0-md pb30-md">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 m-auto wow fadeInUp" data-wow-delay="00ms">
@@ -940,10 +910,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Our CTA -->
-    <section class="our-cta bgc-thm-light pt90 pb90 pt60-md pb60-md">
+    {{-- <section class="our-cta bgc-thm-light pt90 pb90 pt60-md pb60-md">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-xl-6 wow fadeInLeft">
@@ -961,5 +931,70 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
+
+    <style>
+        @media (max-width: 767px) {
+            .home3-logo {
+                display: flex;
+                justify-content: center;
+            }
+
+            .home3-info:last-child > div {
+                justify-content: center !important;
+            }
+
+            .home3-info .info-content {
+                width: 132px !important;
+            }
+
+            .home3-logo img {
+                width: 100%;
+            }
+        }
+
+        .icon-box {
+            width: 30px;
+        }
+
+        .info-content {
+            width: 132px
+        }
+    </style>
 @endsection
+
+@push('scripts')
+<script>
+    $(document).ready(function() {
+    $('#province_id').on('change', function() {
+        var province_id = $(this).val();
+        if (province_id) {
+            $.ajax({
+                url: '/get-districts/' + province_id,
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    // append to select
+                    $('#district_id').empty();
+                    // $('#district_id').append('<option value="">Please select district</option>');
+                    $('#district_id').append(
+                        '<option value="">Please select district</option>');
+                    console.log(data);
+                    $.each(data, function(key, value) {
+                        $('#district_id').append(
+                            '<option value="' + value.id + '">' + value
+                            .name + '</option>'
+                        );
+                        $('#district_id').selectpicker('refresh');
+                        // $('button[data-id="district_id"]').selectpicker('refresh');
+                    });
+
+                }
+            });
+        } else {
+            $('#district_id').empty();
+        }
+    });
+});
+</script>
+@endpush

@@ -25,6 +25,13 @@
                 class="flaticon-home mr15"></i>My
             Properties</a>
     </div>
+    <div class="sidebar_list_item ">
+        <a href="{{ route('admin.users.index') }}"
+            class="items-center
+        @if (Route::currentRouteName() == 'admin.users.index') -is-active @endif
+        "><i
+                class="flaticon-home mr15"></i>Registed User</a>
+    </div>
     {{-- <div class="sidebar_list_item ">
         <a href="page-dashboard-favorites.html" class="items-center"><i
                 class="flaticon-like mr15"></i>My Favorites</a>

@@ -2,6 +2,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserInfoController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,8 @@ Route::middleware(['auth', 'auth.session'])->group(function () {
     Route::get('/admin/products', [ProductController::class, 'index'])->name('admin.products.index');
     Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin.products.create');
     Route::post('/admin/products/store', [ProductController::class, 'store'])->name('admin.products.store');
+
+    Route::get('/admin/users', [UserInfoController::class, 'index'])->name('admin.users.index');
 });
 
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
@@ -38,3 +41,4 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/get-districts/{id}', [ProductController::class, 'getDistricts'])->name('get-districts');
 Route::get('/get-wards/{id}', [ProductController::class, 'getWards'])->name('get-wards');
+Route::post('/user-info', [UserInfoController::class, 'store'])->name('user-info');

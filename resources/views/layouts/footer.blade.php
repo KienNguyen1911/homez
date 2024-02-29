@@ -1,6 +1,6 @@
 <section class="footer-style1 pt60 pb-0">
     <div class="container">
-        <div class="row bb-white-light pb30 mb60">
+        <div class="row bb-white-light pb30">
             <div class="col-sm-5">
                 <div class="footer-widget text-center text-sm-start">
                     <a class="footer-logo" href=""><img src="images/header-logo.svg" alt=""></a>
@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-md-6">
                 <div class="row justify-content-between">
                     <div class="col-auto">
@@ -117,9 +117,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
-    <div class="container white-bdrt1 py-4">
+    {{-- <div class="container white-bdrt1 py-4">
         <div class="row">
             <div class="col-sm-6">
                 <div class="text-center text-lg-start">
@@ -134,5 +134,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </section>
