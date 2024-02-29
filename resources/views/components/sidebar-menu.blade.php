@@ -21,7 +21,7 @@
                     <div class="col-auto">
                         <div class="contact-info">
                             <p class="info-title dark-color">Total Free Customer Care</p>
-                            <h6 class="info-phone dark-color"><a href="%2b(0)-123-050-945-02.html">+(0) 123 050 945
+                            <h6 class="info-phone dark-color"><a href="">+(0) 123 050 945
                                     02</a></h6>
                         </div>
                     </div>

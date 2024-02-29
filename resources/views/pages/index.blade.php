@@ -251,7 +251,7 @@
             </div>
             <div class="row wow fadeInUp" data-wow-delay="300ms">
                 <div class="col-sm-6 col-lg-3">
-                    <a href="page-property-single-v1.html">
+                    <a href="">
                         <div class="position-relative mb50 mb20-md d-flex align-items-center">
                             <div class="city-img flex-shrink-0"><img src="images/listings/cp-s-1.png" alt="">
                             </div>
@@ -263,7 +263,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a href="page-property-single-v1.html">
+                    <a href="">
                         <div class="position-relative mb50 mb20-md d-flex align-items-center">
                             <div class="city-img flex-shrink-0"><img src="images/listings/cp-s-2.png" alt="">
                             </div>
@@ -275,7 +275,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a href="page-property-single-v1.html">
+                    <a href="">
                         <div class="position-relative mb50 mb20-md d-flex align-items-center">
                             <div class="city-img flex-shrink-0"><img src="images/listings/cp-s-3.png" alt="">
                             </div>
@@ -287,7 +287,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a href="page-property-single-v1.html">
+                    <a href="">
                         <div class="position-relative mb50 mb20-md d-flex align-items-center">
                             <div class="city-img flex-shrink-0"><img src="images/listings/cp-s-4.png" alt="">
                             </div>
@@ -299,7 +299,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a href="page-property-single-v1.html">
+                    <a href="">
                         <div class="position-relative mb50 mb20-md d-flex align-items-center">
                             <div class="city-img flex-shrink-0"><img src="images/listings/cp-s-5.png" alt="">
                             </div>
@@ -311,7 +311,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a href="page-property-single-v1.html">
+                    <a href="">
                         <div class="position-relative mb50 mb20-md d-flex align-items-center">
                             <div class="city-img flex-shrink-0"><img src="images/listings/cp-s-6.png" alt="">
                             </div>
@@ -323,7 +323,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a href="page-property-single-v1.html">
+                    <a href="">
                         <div class="position-relative mb50 mb20-md d-flex align-items-center">
                             <div class="city-img flex-shrink-0"><img src="images/listings/cp-s-7.png" alt="">
                             </div>
@@ -335,7 +335,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a href="page-property-single-v1.html">
+                    <a href="">
                         <div class="position-relative mb50 mb20-md d-flex align-items-center">
                             <div class="city-img flex-shrink-0"><img src="images/listings/cp-s-8.png" alt="">
                             </div>
@@ -394,7 +394,7 @@
                                             </div>
                                             <div class="list-content">
                                                 <div class="list-price mb-2">VND {{number_format($product->sale_price)}} / <span>mo</span></div>
-                                                <h6 class="list-title"><a href="page-property-single-v1.html">
+                                                <h6 class="list-title"><a href="">
                                                     {{ $product->name }} 
                                                 </a></h6>
                                                 <p class="list-text">
@@ -439,7 +439,7 @@
                     <div class="dots_nav_light navi_pagi_bottom_center slider-dib-sm slider-5-grid owl-carousel owl-theme wow fadeInUp"
                         data-wow-delay="300ms">
                         <div class="item">
-                            <a href="page-property-single-v1.html">
+                            <a href="">
                                 <div class="iconbox-style1 dark-style">
                                     <span class="icon flaticon-home"></span>
                                     <div class="iconbox-content">
@@ -450,7 +450,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="page-property-single-v1.html">
+                            <a href="">
                                 <div class="iconbox-style1 dark-style">
                                     <span class="icon flaticon-corporation"></span>
                                     <div class="iconbox-content">
@@ -461,7 +461,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="page-property-single-v1.html">
+                            <a href="">
                                 <div class="iconbox-style1 dark-style">
                                     <span class="icon flaticon-network"></span>
                                     <div class="iconbox-content">
@@ -472,7 +472,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="page-property-single-v1.html">
+                            <a href="">
                                 <div class="iconbox-style1 dark-style">
                                     <span class="icon flaticon-garden"></span>
                                     <div class="iconbox-content">
@@ -483,7 +483,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="page-property-single-v1.html">
+                            <a href="">
                                 <div class="iconbox-style1 dark-style">
                                     <span class="icon flaticon-chat"></span>
                                     <div class="iconbox-content">
@@ -494,7 +494,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="page-property-single-v1.html">
+                            <a href="">
                                 <div class="iconbox-style1 dark-style">
                                     <span class="icon flaticon-window"></span>
                                     <div class="iconbox-content">
@@ -505,7 +505,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="page-property-single-v1.html">
+                            <a href="">
                                 <div class="iconbox-style1 dark-style">
                                     <span class="icon flaticon-bird-house"></span>
                                     <div class="iconbox-content">
@@ -516,7 +516,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="page-property-single-v1.html">
+                            <a href="">
                                 <div class="iconbox-style1 dark-style">
                                     <span class="icon flaticon-garden"></span>
                                     <div class="iconbox-content">
@@ -527,7 +527,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="page-property-single-v1.html">
+                            <a href="">
                                 <div class="iconbox-style1 dark-style">
                                     <span class="icon flaticon-chat"></span>
                                     <div class="iconbox-content">
@@ -538,7 +538,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="page-property-single-v1.html">
+                            <a href="">
                                 <div class="iconbox-style1 dark-style">
                                     <span class="icon flaticon-window"></span>
                                     <div class="iconbox-content">
@@ -549,7 +549,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="page-property-single-v1.html">
+                            <a href="">
                                 <div class="iconbox-style1 dark-style">
                                     <span class="icon flaticon-bird-house"></span>
                                     <div class="iconbox-content">
@@ -572,7 +572,7 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="position-relative mb30-md">
                         <img class="w-100" src="images/about/why-chose-1.png" alt="">
-                        <a href="page-property-single-v1.html">
+                        <a href="">
                             <div class="iconbox-style5 d-flex align-items-center">
                                 <span class="icon flaticon-home flex-shrink-0"></span>
                                 <div class="iconbox-content flex-shrink-1 ms-2">
@@ -905,7 +905,7 @@
                                 <span class="day">28</span>
                             </div>
                             <a class="tag" href="#">Living Room</a>
-                            <h6 class="title mt-1"><a href="page-blog-single.html">Private Contemporary Home Balancing
+                            <h6 class="title mt-1"><a href="">Private Contemporary Home Balancing
                                     Openness</a></h6>
                         </div>
                     </div>
@@ -919,7 +919,7 @@
                                 <span class="day">28</span>
                             </div>
                             <a class="tag" href="#">Living Room</a>
-                            <h6 class="title mt-1"><a href="page-blog-single.html">Private Contemporary Home Balancing
+                            <h6 class="title mt-1"><a href="">Private Contemporary Home Balancing
                                     Openness</a></h6>
                         </div>
                     </div>
@@ -933,7 +933,7 @@
                                 <span class="day">28</span>
                             </div>
                             <a class="tag" href="#">Living Room</a>
-                            <h6 class="title mt-1"><a href="page-blog-single.html">Private Contemporary Home Balancing
+                            <h6 class="title mt-1"><a href="">Private Contemporary Home Balancing
                                     Openness</a></h6>
                         </div>
                     </div>
@@ -950,7 +950,7 @@
                     <div class="cta-style3">
                         <h2 class="cta-title">Become a Real Estate Agent</h2>
                         <p class="cta-text mb25">We only work with the best companies around the globe to survey</p>
-                        <a href="page-contact.html" class="ud-btn btn-thm">Register Now <i
+                        <a href="" class="ud-btn btn-thm">Register Now <i
                                 class="fal fa-arrow-right-long"></i></a>
                     </div>
                 </div>

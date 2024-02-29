@@ -3,7 +3,7 @@
         <div class="row bb-white-light pb30 mb60">
             <div class="col-sm-5">
                 <div class="footer-widget text-center text-sm-start">
-                    <a class="footer-logo" href="index-2.html"><img src="images/header-logo.svg" alt=""></a>
+                    <a class="footer-logo" href=""><img src="images/header-logo.svg" alt=""></a>
                 </div>
             </div>
             <div class="col-sm-7">
@@ -65,7 +65,7 @@
                         <div class="col-auto">
                             <div class="contact-info">
                                 <p class="info-title">Total Free Customer Care</p>
-                                <h6 class="info-phone"><a href="%2b(0)-123-050-945-02.html">+(0) 123 050 945 02</a></h6>
+                                <h6 class="info-phone"><a href="">+(0) 123 050 945 02</a></h6>
                             </div>
                         </div>
                         <div class="col-auto">
