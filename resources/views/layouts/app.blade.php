@@ -33,6 +33,8 @@
     <link href="images/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
     <link href="images/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
     <link href="images/apple-touch-icon-180x180.png" sizes="180x180" rel="apple-touch-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+
 
 </head>
 
@@ -41,18 +43,18 @@
         <div class="preloader"></div>
         {{-- @include('layouts.header') --}}
         <!-- Signup Modal -->
-        @include('components.modals.signup')
+        {{-- @include('components.modals.signup') --}}
         <!-- Menu In Hiddn SideBar -->
-        @include('components.sidebar-menu')
+        {{-- @include('components.sidebar-menu') --}}
         <!--End Menu In Hiddn SideBar -->
         <!-- Advance Feature Modal Start -->
-        @include('components.modals.advanced-search')
+        {{-- @include('components.modals.advanced-search') --}}
         <!-- Advance Feature Modal End -->
 
         <div class="hiddenbar-body-ovelay"></div>
 
         <!-- Mobile Nav  -->
-        @include('components.mobile-nav')
+        {{-- @include('components.mobile-nav') --}}
 
         <div class="body_content">
 
@@ -78,6 +80,9 @@
     <script src="js/pricing-slider.js"></script>
     <!-- Custom script for all pages -->
     <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+    @stack('scripts')
 </body>
 
 </html>

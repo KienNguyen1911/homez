@@ -22,6 +22,12 @@ class Product extends Model
         3 => 'Sold out',
     ];
 
+    const PROVINCES = [
+        'HANOI' => '01',
+        'HOCHIMINH' => '79',
+        'DANANG' => '48',
+    ];
+
     protected $casts = [
         'images' => 'array',
     ];
