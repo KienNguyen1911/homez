@@ -19,10 +19,12 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+            toastr()->success('Login successfully');
 
-            return redirect()->intended('admin/dashboard')->with('success', 'You are logged in!');
+            return redirect()->intended('admin/dashboard');
         }
  
+        toastr()->error('Login failed, please check your email and password again.');
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
