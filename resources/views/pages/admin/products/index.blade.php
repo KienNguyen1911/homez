@@ -11,7 +11,7 @@
                 <p class="text">We are glad to see you again!</p>
             </div>
         </div>
-        <div class="col-xxl-9">
+        {{-- <div class="col-xxl-9">
             <div class="dashboard_search_meta d-md-flex align-items-center justify-content-xxl-end">
                 <div class="item1 mb15-sm">
                     <div class="search_area">
@@ -30,9 +30,9 @@
                         </select>
                     </div>
                 </div>
-                <a href="#" class="ud-btn btn-thm">Add New Property<i class="fal fa-arrow-right-long"></i></a>
+                <a href="{{ route('admin.products.create') }}" class="ud-btn btn-thm">Add New Property<i class="fal fa-arrow-right-long"></i></a>
             </div>
-        </div>
+        </div> --}}
     </div>
     <div class="row">
         <div class="col-xl-12">
@@ -44,28 +44,32 @@
                                 <th scope="col">Listing title</th>
                                 <th scope="col">Date Published</th>
                                 <th scope="col">Status</th>
-                                <th scope="col">View</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody class="t-body">
+                            @foreach ($products as $product)
                             <tr>
                                 <th scope="row">
                                     <div class="listing-style1 dashboard-style d-xxl-flex align-items-center mb-0">
                                         <div class="list-thumb">
-                                            <img class="w-100" src="images/listings/list-1.jpg" alt="">
+                                            <img class="w-100" src="{{ asset($product->main_image) }}" alt="">
                                         </div>
                                         <div class="list-content py-0 p-0 mt-2 mt-xxl-0 ps-xxl-4">
-                                            <div class="h6 list-title"><a href="page-property-single-v1.html">Equestrian
-                                                    Family Home</a></div>
-                                            <p class="list-text mb-0">California City, CA, USA</p>
-                                            <div class="list-price"><a href="#">$14,000/<span>mo</span></a></div>
+                                            <div class="h6 list-title">
+                                                <a href="">{{ $product->name }}</a>
+                                            </div>
+                                            <p class="list-text mb-0">
+                                                {{ $product->province->name }}, {{ $product->district->name }}, {{ $product->ward->name }}
+                                            </p>
+                                            <div class="list-price">
+                                                <a href="#">{{number_format($product->price)}}/<span>mo</span></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </th>
-                                <td class="vam">December 31, 2022</td>
+                                <td class="vam">{{ $product->created_at }}</td>
                                 <td class="vam"><span class="pending-style style1">Pending</span></td>
-                                <td class="vam">December 31, 2022</td>
                                 <td class="vam">
                                     <div class="d-flex">
                                         <a href="#" class="icon" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -75,116 +79,10 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="listing-style1 dashboard-style d-xxl-flex align-items-center mb-0">
-                                        <div class="list-thumb">
-                                            <img class="w-100" src="images/listings/list-2.jpg" alt="">
-                                        </div>
-                                        <div class="list-content py-0 p-0 mt-2 mt-xxl-0 ps-xxl-4">
-                                            <div class="h6 list-title"><a href="page-property-single-v1.html">Luxury villa
-                                                    in Rego Park</a></div>
-                                            <p class="list-text mb-0">California City, CA, USA</p>
-                                            <div class="list-price"><a href="#">$14,000/<span>mo</span></a></div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <td class="vam">December 31, 2022</td>
-                                <td class="vam"><span class="pending-style style2">Published</span></td>
-                                <td class="vam">December 31, 2022</td>
-                                <td class="vam">
-                                    <div class="d-flex">
-                                        <a href="#" class="icon" data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Edit"><span class="fas fa-pen fa"></span></a>
-                                        <a href="#" class="icon" data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Delete"><span class="flaticon-bin"></span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="active">
-                                    <div class="listing-style1 dashboard-style d-xxl-flex align-items-center mb-0">
-                                        <div class="list-thumb">
-                                            <img class="w-100" src="images/listings/list-3.jpg" alt="">
-                                        </div>
-                                        <div class="list-content py-0 p-0 mt-2 mt-xxl-0 ps-xxl-4">
-                                            <div class="h6 list-title"><a href="page-property-single-v1.html">Villa on
-                                                    Hollywood Boulevard</a></div>
-                                            <p class="list-text mb-0">California City, CA, USA</p>
-                                            <div class="list-price"><a href="#">$14,000/<span>mo</span></a></div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <td class="vam">December 31, 2022</td>
-                                <td class="vam"><span class="pending-style style3">Processing</span></td>
-                                <td class="vam">December 31, 2022</td>
-                                <td class="vam">
-                                    <div class="d-flex">
-                                        <a href="#" class="icon" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="Edit"><span
-                                                class="fas fa-pen fa"></span></a>
-                                        <a href="#" class="icon" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="Delete"><span class="flaticon-bin"></span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="listing-style1 dashboard-style d-xxl-flex align-items-center mb-0">
-                                        <div class="list-thumb">
-                                            <img class="w-100" src="images/listings/list-4.jpg" alt="">
-                                        </div>
-                                        <div class="list-content py-0 p-0 mt-2 mt-xxl-0 ps-xxl-4">
-                                            <div class="h6 list-title"><a href="page-property-single-v1.html">Triple Story
-                                                    House for Rent</a></div>
-                                            <p class="list-text mb-0">California City, CA, USA</p>
-                                            <div class="list-price"><a href="#">$14,000/<span>mo</span></a></div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <td class="vam">December 31, 2022</td>
-                                <td class="vam"><span class="pending-style style2">Published</span></td>
-                                <td class="vam">December 31, 2022</td>
-                                <td class="vam">
-                                    <div class="d-flex">
-                                        <a href="#" class="icon" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="Edit"><span
-                                                class="fas fa-pen fa"></span></a>
-                                        <a href="#" class="icon" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="Delete"><span class="flaticon-bin"></span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="listing-style1 dashboard-style d-xxl-flex align-items-center mb-0">
-                                        <div class="list-thumb">
-                                            <img class="w-100" src="images/listings/list-5.jpg" alt="">
-                                        </div>
-                                        <div class="list-content py-0 p-0 mt-2 mt-xxl-0 ps-xxl-4">
-                                            <div class="h6 list-title"><a href="page-property-single-v1.html">Northwest
-                                                    Office Space</a></div>
-                                            <p class="list-text mb-0">California City, CA, USA</p>
-                                            <div class="list-price"><a href="#">$14,000/<span>mo</span></a></div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <td class="vam">December 31, 2022</td>
-                                <td class="vam"><span class="pending-style style1">Pending</span></td>
-                                <td class="vam">December 31, 2022</td>
-                                <td class="vam">
-                                    <div class="d-flex">
-                                        <a href="#" class="icon" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="Edit"><span
-                                                class="fas fa-pen fa"></span></a>
-                                        <a href="#" class="icon" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="Delete"><span class="flaticon-bin"></span></a>
-                                    </div>
-                                </td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
-                    <div class="mbp_pagination text-center mt30">
+                    {{-- <div class="mbp_pagination text-center mt30">
                         <ul class="page_navigation">
                             <li class="page-item">
                                 <a class="page-link" href="#"> <span class="fas fa-angle-left"></span></a>
@@ -203,7 +101,7 @@
                             </li>
                         </ul>
                         <p class="mt10 pagination_page_count text-center">1 – 20 of 300+ property available</p>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

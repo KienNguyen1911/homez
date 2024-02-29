@@ -39,7 +39,7 @@
 <body>
     <div class="wrapper ovh">
         <div class="preloader"></div>
-        @include('layouts.header')
+        {{-- @include('layouts.header') --}}
         <!-- Signup Modal -->
         @include('components.modals.signup')
         <!-- Menu In Hiddn SideBar -->
