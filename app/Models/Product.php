@@ -25,4 +25,19 @@ class Product extends Model
     protected $casts = [
         'images' => 'array',
     ];
+
+    public function province()
+    {
+        return $this->belongsTo(\Kjmtrue\VietnamZone\Models\Province::class, 'province_id', 'id');
+    }
+
+    public function district()
+    {
+        return $this->belongsTo(\Kjmtrue\VietnamZone\Models\District::class, 'district_id', 'id');
+    }
+
+    public function ward()
+    {
+        return $this->belongsTo(\Kjmtrue\VietnamZone\Models\Ward::class, 'ward_id', 'id');
+    }
 }

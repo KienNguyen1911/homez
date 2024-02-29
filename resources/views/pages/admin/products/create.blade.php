@@ -58,7 +58,7 @@
                                                         <select class="selectpicker" name="status">
                                                             <option>Please select status</option>
                                                             @foreach (App\Models\Product::STATUS as $key => $status)
-                                                                <option value="{{ $status }}">{{ $status }}
+                                                                <option value="{{ $key }}">{{ $status }}
                                                                 </option>
                                                             @endforeach
                                                         </select>
@@ -101,12 +101,12 @@
                                         </div>
                                         <input type="file" name="main_image" id="main_image"
                                             style="visibility: hidden">
-                                        <input type="file" name="images" id="images" style="visibility: hidden"
+                                        <input type="file" name="images[]" id="images" style="visibility: hidden"
                                             multiple>
                                     </div>
-                                    <div class="col-lg-5">
+                                    {{-- <div class="col-lg-12"> --}}
                                         <div class="profile-box position-relative d-md-flex align-items-end mb50"></div>
-                                    </div>
+                                    {{-- </div> --}}
                                 </div>
                             </div>
                             {{-- LOCATION --}}
@@ -218,14 +218,14 @@
                 var district_id = $(this).val();
                 if (district_id) {
                     $.ajax({
-                        url: '/get-districts/' + district_id,
+                        url: '/get-wards/' + district_id,
                         type: "GET",
                         dataType: "json",
                         success: function(data) {
                             // append to select
                             $('select[name="ward_id"]').empty();
                             $('#ward_id').append(
-                                '<option value="">Please select district</option>');
+                                '<option value="">Please select ward</option>');
                             console.log(data);
                             $.each(data, function(key, value) {
                                 $('select[name="ward_id"]').append(
@@ -261,11 +261,11 @@
                         $('.profile-box').html(
                             '<div class="profile-img position-relative overflow-hidden bdrs12 mb20-sm">' +
                             '<img src="' + e.target.result +
-                            '" alt="" style="width:250px, height:250px, object-fit:cover">' +
+                            '" alt="" style="width:250px; height:250px; object-fit:cover">' +
                             '<a href="#" class="tag-del" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Delete Image" aria-label="Delete Item">' +
                             '<span class="fas fa-trash-can"></span>' +
+                            '<span class="bg-white px-2 py-1 text-center rounded-3">Main</span>' +
                             '</a>' +
-                            '<span class="">Main</span>' +
                             '</div>'
                         );
                     }
@@ -282,7 +282,7 @@
                             $('.profile-box').append(
                                 '<div class="profile-img position-relative overflow-hidden bdrs12 mb20-sm">' +
                                 '<img src="' + e.target.result +
-                                '" alt="" style="width:250px, height:250px, object-fit:cover">' +
+                                '" alt="" style="width:250px; height:250px; object-fit:cover">' +
                                 '<a href="#" class="tag-del" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Delete Image" aria-label="Delete Item">' +
                                 '<span class="fas fa-trash-can"></span>' +
                                 '</a>' +

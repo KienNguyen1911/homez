@@ -22,7 +22,17 @@ class StoreProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
+            'price' => 'required|numeric',
+            'sale_price' => 'required|numeric',
+            'main_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'images' => 'required',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'status' => 'required',
+            'province_id' => 'required',
+            'district_id' => 'required',
+            'ward_id' => 'required',
         ];
     }
 }

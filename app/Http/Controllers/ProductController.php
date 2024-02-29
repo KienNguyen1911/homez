@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -22,7 +23,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.products.index');
+        $products = Product::with(['province', 'district', 'ward'])->paginate(10);
+        foreach ($products as $product) {
+            $product->main_image = asset('storage/' . $product->main_image);
+        }
+        return view('pages.admin.products.index', compact('products'));
     }
 
     /**
@@ -40,19 +45,32 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        // save image to storage
-        $images = [];
-
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $path = $image->store('products/images', 'public');
-                $images[] = $path;
+        try {
+            DB::beginTransaction();
+            // save image to storage
+            $data = $request->all();
+            if ($request->hasFile('images')) {
+                foreach ($request->file('images') as $image) {
+                    // change file name before store
+                    $path = $image->store('products/images', 'public');
+                    $images[] = $path;
+                }
             }
-        }
+    
+            if ($request->hasFile('main_image')) {
+                // change file name before store
 
-        $product = Product::create($request->all());
-        
-        return redirect()->route('admin.products.index');
+                $data['main_image'] = $request->main_image->store('product/images', 'public');
+            }
+            $data['images'] = $images;
+            
+            Product::create($data);
+            DB::commit();
+            return redirect()->route('admin.products.index');
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            throw $th;
+        }
     }
 
     /**
