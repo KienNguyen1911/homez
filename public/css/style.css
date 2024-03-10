@@ -768,15 +768,15 @@ h2 {
   padding: 10px 20px;
   border-radius: 60px;
 }
-.pending-style.style1 {
+.pending-style.style0 {
   background-color: #FFF8DD;
   color: #E4B303;
 }
-.pending-style.style2 {
+.pending-style.style1 {
   background-color: #E5F0FD;
   color: #3554D1;
 }
-.pending-style.style3 {
+.pending-style.style2 {
   background-color: #FFF5F8;
   color: #F1416C;
 }

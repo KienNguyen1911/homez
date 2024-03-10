@@ -12,7 +12,7 @@ class UserInfoController extends Controller
 {
     public function index()
     {
-        $userInfos = UserInfo::query()->orderBy('created_at', 'desc')->paginate(10);
+        $userInfos = UserInfo::query()->orderBy('created_at', 'desc')->paginate(20);
         foreach ($userInfos as $item) {
             $item->province = \Kjmtrue\VietnamZone\Models\Province::find($item->province_id)->name;
             $districts = \Kjmtrue\VietnamZone\Models\District::whereIn('id', $item->district_ids)->get();

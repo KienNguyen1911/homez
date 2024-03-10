@@ -24,7 +24,10 @@
                         </ul>
                     </div>
                 @endif
-                <form action="{{ route('admin.products.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('admin.products.update', ['product' => $product->id]) }}"
+                    method="post" enctype="multipart/form-data"
+                >
+                    @method('PUT')
                     @csrf
                     <div class="navtab-style1">
                         <nav>
@@ -50,15 +53,20 @@
                                             <div class="col-sm-12">
                                                 <div class="mb20">
                                                     <label class="heading-color ff-heading fw600 mb10">Title</label>
-                                                    <input type="text" class="form-control" name="name" value="{{ old('name') }}"
+                                                    <input type="text" class="form-control" name="name" 
+                                                        value="{{ old('name', $product->name) }}"
                                                         placeholder="Product Name">
                                                 </div>
                                             </div>
                                             <div class="col-sm-12">
                                                 <div class="mb20">
-                                                    <label class="heading-color ff-heading fw600 mb10">Description</label>
-                                                    <textarea cols="30" rows="5" name="description" placeholder="There are many variations of passages.">
-                                                        {{ old('description') }}
+                                                    <label class="heading-color ff-heading fw600 mb10">
+                                                        Description
+                                                    </label>
+                                                    <textarea cols="30" rows="5" name="description"
+                                                        placeholder="There are many variations of passages."
+                                                    >
+                                                        {{ old('description', $product->description) }}
                                                     </textarea>
                                                 </div>
                                             </div>
@@ -70,8 +78,12 @@
                                                             <option>Please select status</option>
                                                             @foreach (App\Models\Product::STATUS as $key => $status)
                                                                 <option value="{{ $key }}"
-                                                                    @if (old('status') == $key) selected @endif
-                                                                >{{ $status }}</option>
+                                                                    @if ($product->status == $key)
+                                                                        selected
+                                                                    @endif
+                                                                >
+                                                                    {{ $status }}
+                                                                </option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -80,14 +92,18 @@
                                             <div class="col-sm-6 col-xl-4">
                                                 <div class="mb30">
                                                     <label class="heading-color ff-heading fw600 mb10">Price</label>
-                                                    <input type="number" class="form-control" name="price" value="{{ old('price') }}"
+                                                    <input type="number" class="form-control" name="price"
+                                                        value="{{ old('price', $product->price) }}"
                                                         placeholder="Price">
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-xl-4">
                                                 <div class="mb30">
-                                                    <label class="heading-color ff-heading fw600 mb10">Sale Price</label>
-                                                    <input type="number" class="form-control" name="sale_price" value="{{ old('sale_price') }}"
+                                                    <label class="heading-color ff-heading fw600 mb10">
+                                                        Sale Price
+                                                    </label>
+                                                    <input type="number" class="form-control" name="sale_price"
+                                                        value="{{ old('sale_price', $product->sale_price) }}"
                                                         placeholder="Sale Name">
                                                 </div>
                                             </div>
@@ -98,7 +114,7 @@
                             <div class="tab-pane fade" id="nav-item2" role="tabpanel" aria-labelledby="nav-item2-tab">
                                 <div class="ps-widget bgc-white bdrs12 p30 overflow-hidden position-relative row">
                                     <h4 class="title fz17 mb30">Upload photos of your property</h4>
-                                    <div class="col-md-12 col-lg-6">
+                                    <div class="col-lg-6">
                                         <div
                                             class="upload-img position-relative overflow-hidden bdrs12 text-center mb30 px-2">
                                             <div class="icon mb30"><span class="flaticon-upload"></span></div>
@@ -116,13 +132,42 @@
                                         {{-- <input type="file" name="images[]" id="images" style="visibility: hidden"
                                             multiple> --}}
                                     </div>
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="profile-box position-relative d-md-flex align-items-end mb50"></div>
+
+                                    {{-- preview image --}}
+                                    <div class="col-lg-6">
+                                        <div class="profile-box position-relative d-md-flex align-items-end mb50">
+                                            {{-- main image --}}
+                                            <div class="profile-img position-relative overflow-hidden bdrs12 mb20-sm">
+                                                <img src="{{ asset('storage/' . $product->main_image) }}"
+                                                    alt="" style="width:400px; height:400px; object-fit:cover"
+                                                >
+                                                <a href="#" class="tag-del" data-bs-toggle="tooltip"
+                                                    data-bs-placement="top" title=""
+                                                    data-bs-original-title="Delete Image" aria-label="Delete Item">
+                                                <span class="fas fa-trash-can"></span>
+                                                <span class="bg-white px-2 py-1 text-center rounded-3">Main</span>
+                                                </a>
+                                            </div>
+                                            {{-- @foreach ($product->images as $image)
+                                                <div class="profile-img position-relative overflow-hidden bdrs12 mb20-sm">
+                                                    <img src="{{ asset('storage/' . $image) }}"
+                                                        alt="" style="width:250px; height:250px; object-fit:cover"
+                                                    >
+                                                    <a href="#" class="tag-del" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title=""
+                                                        data-bs-original-title="Delete Image" aria-label="Delete Item">
+                                                    <span class="fas fa-trash-can"></span>
+                                                    </a>
+                                                </div>
+                                            @endforeach --}}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             {{-- LOCATION --}}
-                            <div class="tab-pane fade" id="nav-item3" role="tabpanel" aria-labelledby="nav-item3-tab">
+                            <div class="tab-pane fade" id="nav-item3"
+                                role="tabpanel" aria-labelledby="nav-item3-tab"
+                            >
                                 <div class="ps-widget bgc-white bdrs12 p30 overflow-hidden position-relative">
                                     <h4 class="title fz17 mb30">Listing Location</h4>
                                     <div class="form-style1">
@@ -130,7 +175,8 @@
                                             <div class="col-sm-12">
                                                 <div class="mb20">
                                                     <label class="heading-color ff-heading fw600 mb10">Address</label>
-                                                    <input type="text" name="address" class="form-control" value="{{ old('address') }}"
+                                                    <input type="text" name="address" class="form-control"
+                                                        value="{{ old('address', $product->address) }}"
                                                         placeholder="Your Name">
                                                 </div>
                                             </div>
@@ -139,10 +185,17 @@
                                                     <label class="heading-color ff-heading fw600 mb10">Country /
                                                         State</label>
                                                     <div class="location-area">
-                                                        <select class="selectpicker" name="province_id" id="province_id">
-                                                            <option>Please select province</option>
+                                                        <select class="selectpicker" name="province_id"
+                                                            id="province_id"
+                                                        >
+                                                            <option value="">Please select province</option>
                                                             @foreach ($provinces as $province)
-                                                                <option value="{{ $province->id }}">{{ $province->name }}
+                                                                <option value="{{ $province->id }}"
+                                                                    @if ($product->province_id == $province->id)
+                                                                        selected
+                                                                    @endif
+                                                                >
+                                                                    {{ $province->name }}
                                                                 </option>
                                                             @endforeach
                                                         </select>
@@ -153,8 +206,9 @@
                                                 <div class="mb20">
                                                     <label class="heading-color ff-heading fw600 mb10">City</label>
                                                     <div class="location-area">
-                                                        <select class="selectpicker" name="district_id" id="district_id">
-                                                            <option>Please select district</option>
+                                                        <select class="selectpicker" name="district_id"
+                                                            id="district_id"
+                                                        >
                                                         </select>
                                                     </div>
                                                 </div>
@@ -164,7 +218,6 @@
                                                     <label class="heading-color ff-heading fw600 mb10">Ward</label>
                                                     <div class="location-area">
                                                         <select class="selectpicker" name="ward_id" id="ward_id">
-                                                            <option>Please select ward</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -196,64 +249,98 @@
 @push('script')
     <script>
         $(document).ready(function() {
-            $('#province_id').on('change', function() {
-                var province_id = $(this).val();
-                if (province_id) {
-                    $.ajax({
-                        url: '/get-districts/' + province_id,
-                        type: "GET",
-                        dataType: "json",
-                        success: function(data) {
-                            // append to select
-                            $('select[name="district_id"]').empty();
-                            // $('select[name="district_id"]').append('<option value="">Please select district</option>');
-                            $('#district_id').append(
-                                '<option value="">Please select district</option>');
-                            console.log(data);
-                            $.each(data, function(key, value) {
-                                $('select[name="district_id"]').append(
-                                    '<option value="' + value.id + '">' + value
-                                    .name + '</option>'
-                                );
-                                $('select[name="district_id"]').selectpicker('refresh');
-                                // $('button[data-id="district_id"]').selectpicker('refresh');
-                            });
+            // check if province_id is selected in the first place
+            if ($('#province_id').val()) {
+                getDistricts({{ $product->province_id }});
+            }
 
-                        }
-                    });
+            // if province_id changes by selecting new province, get districts
+            $('#province_id').on('change', function() {
+                let province_id = $(this).val();
+
+                if (province_id) {
+                    getDistricts(province_id);
                 } else {
-                    $('select[name="district_id"]').empty();
+                    $('#district_id').empty();
+                    $('#district_id').selectpicker('refresh');
+                }
+                $('#ward_id').empty();
+                $('#ward_id').selectpicker('refresh');
+            });
+
+            // if district_id changes by selecting new district, get wards
+            $('#district_id').on('change', function() {
+                let district_id = $(this).val();
+                
+                if (district_id) {
+                    getWards(district_id);
+                } else {
+                    $('select[name="ward_id"]').empty();
+                    $('select[name="ward_id"]').selectpicker('refresh');
                 }
             });
 
-            $('#district_id').on('change', function() {
-                var district_id = $(this).val();
-                if (district_id) {
-                    $.ajax({
-                        url: '/get-wards/' + district_id,
-                        type: "GET",
-                        dataType: "json",
-                        success: function(data) {
-                            // append to select
-                            $('select[name="ward_id"]').empty();
-                            $('#ward_id').append(
-                                '<option value="">Please select ward</option>');
-                            console.log(data);
-                            $.each(data, function(key, value) {
+            // get districts by province_id
+            function getDistricts(province_id) {
+                $.ajax({
+                    url: '/get-districts/' + province_id,
+                    type: "GET",
+                    dataType: "json",
+                    success: function(data) {
+                        // append to select
+                        $('#district_id').empty();
+                        $('#district_id').append(
+                            '<option value="">Please select district</option>');
+                        $.each(data, function(key, value) {
+                            if (value.id == {{ $product->district_id }}) {
+                                $('#district_id').append(
+                                    '<option value="' + value.id + '" selected>' + value
+                                    .name + '</option>'
+                                );
+                            } else {
+                                $('#district_id').append(
+                                    '<option value="' + value.id + '">' + value
+                                    .name + '</option>'
+                                );
+                            }
+                        });
+                        if ($('#district_id').val()) {
+                            getWards($('#district_id').val());
+                        }
+                        $('#district_id').selectpicker('refresh');
+                    }
+                });
+            }
+
+            // get wards by district_id
+            function getWards(id) {
+                $.ajax({
+                    url: '/get-wards/' + id,
+                    type: "GET",
+                    dataType: "json",
+                    success: function(data) {
+                        // append to select
+                        $('select[name="ward_id"]').empty();
+                        $('#ward_id').append(
+                            '<option value="">Please select ward</option>');
+                        $.each(data, function(key, value) {
+                            if (value.id == {{ $product->ward_id }}) {
+                                $('select[name="ward_id"]').append(
+                                    '<option value="' + value.id + '" selected>' + value
+                                    .name + '</option>'
+                                );
+                            } else {
                                 $('select[name="ward_id"]').append(
                                     '<option value="' + value.id + '">' + value
                                     .name + '</option>'
                                 );
-                                $('select[name="ward_id"]').selectpicker('refresh');
-                            });
-
-                        }
-                    });
-                } else {
-                    $('select[name="ward_id"]').empty();
-                }
-            });
-
+                            }
+                        });
+                        $('select[name="ward_id"]').selectpicker('refresh');
+                    }
+                });
+            }
+            
             // preview image before upload
             $('#browse-btn').click(function() {
                 // open file dialog
@@ -273,7 +360,7 @@
                         $('.profile-box').html(
                             '<div class="profile-img position-relative overflow-hidden bdrs12 mb20-sm">' +
                             '<img src="' + e.target.result +
-                            '" alt="" style="width:400px; height:400px; object-fit:cover">' +
+                            '" alt="" style="width:250px; height:250px; object-fit:cover">' +
                             '<a href="#" class="tag-del" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Delete Image" aria-label="Delete Item">' +
                             '<span class="fas fa-trash-can"></span>' +
                             '<span class="bg-white px-2 py-1 text-center rounded-3">Main</span>' +

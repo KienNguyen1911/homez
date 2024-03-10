@@ -63,47 +63,85 @@
                                                 {{ $product->province->name }}, {{ $product->district->name }}, {{ $product->ward->name }}
                                             </p>
                                             <div class="list-price">
-                                                <a href="#">{{number_format($product->price)}}/<span>mo</span></a>
+                                                <a href="#">{{number_format($product->price)}} VND/<span>mo</span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </th>
                                 <td class="vam">{{ $product->created_at }}</td>
-                                <td class="vam"><span class="pending-style style1">Pending</span></td>
+                                <td class="vam">
+                                    @foreach (\App\Models\Product::STATUS as $key => $status)
+                                        @if ($product->status == $key)
+                                        <span class="pending-style style{{$key}}">
+                                            {{ $status }}
+                                        </span>
+                                        @endif
+                                    @endforeach
+                                </td>
                                 <td class="vam">
                                     <div class="d-flex">
-                                        <a href="#" class="icon" data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Edit"><span class="fas fa-pen fa"></span></a>
-                                        <a href="#" class="icon" data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Delete"><span class="flaticon-bin"></span></a>
+                                        <a href="{{ route('admin.products.edit', ['product' => $product->id]) }}"
+                                            class="icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                            <span class="fas fa-pen fa"></span>
+                                        </a>
+                                        <a class="icon delete-btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle"
+                                            href="#exampleModalToggle" data-bs-placement="top" title="Delete" data-value="{{ $product->id }}"
+                                        >
+                                            <span class="flaticon-bin"></span>
+                                        </a>
                                     </div>
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
-                    {{-- <div class="mbp_pagination text-center mt30">
-                        <ul class="page_navigation">
-                            <li class="page-item">
-                                <a class="page-link" href="#"> <span class="fas fa-angle-left"></span></a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item active" aria-current="page">
-                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                            <li class="page-item"><a class="page-link" href="#">5</a></li>
-                            <li class="page-item"><a class="page-link" href="#">...</a></li>
-                            <li class="page-item"><a class="page-link" href="#">20</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#"><span class="fas fa-angle-right"></span></a>
-                            </li>
-                        </ul>
-                        <p class="mt10 pagination_page_count text-center">1 – 20 of 300+ property available</p>
-                    </div> --}}
+                    {{ $products->links('pagination::default') }}
                 </div>
             </div>
         </div>
     </div>
+  <!-- Signup Modal -->
+  <div class="signup-modal">
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel">Delete product</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal_text">
+              <h4>Are you sure you want to delete this property?</h4>
+              <p>Once you delete this property, it won't be possible to undo this action.</p>
+            </div>
+            {{-- confirm --}}
+            <form method="post" id="delete-form">
+                @csrf
+                @method('DELETE')
+                <input type="hidden" name="product_id" id="product_id" value="">
+                <div class="modal_btn">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 @endsection
+
+@push('script')
+    <script>
+        $(document).ready(function() {
+            // pass param value to modal
+            $('.delete-btn').on('click', function() {
+                var product_id = $(this).data('value');
+                let url = '{{ route('admin.products.destroy', ['product' => ':product_id']) }}';
+                $('#delete-form').attr('action', url.replace(':product_id', product_id));
+            });
+            
+            
+        });
+    </script>
+@endpush

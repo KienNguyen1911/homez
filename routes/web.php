@@ -23,16 +23,17 @@ Route::get('/login', function () {
     return view('pages.auth.login');
 });
 
-Route::middleware(['auth', 'auth.session'])->group(function () {
-    Route::get('/admin/dashboard', function () {
+Route::name('admin.')->prefix('admin')->middleware(['auth', 'auth.session'])->group(function () {
+    Route::get('/dashboard', function () {
         return view('pages.admin.index');
-    })->name('admin.dashboard');
+    })->name('dashboard');
 
-    Route::get('/admin/products', [ProductController::class, 'index'])->name('admin.products.index');
-    Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin.products.create');
-    Route::post('/admin/products/store', [ProductController::class, 'store'])->name('admin.products.store');
-
-    Route::get('/admin/users', [UserInfoController::class, 'index'])->name('admin.users.index');
+    // Route::get('/admin/products', [ProductController::class, 'index'])->name('admin.products.index');
+    // Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin.products.create');
+    // Route::post('/admin/products/store', [ProductController::class, 'store'])->name('admin.products.store');
+    // Route::get('/admin/products/{id}/edit', [ProductController::class, 'edit'])->name('admin.products.edit');
+    Route::get('users', [UserInfoController::class, 'index'])->name('users.index');
+    Route::resource('products', ProductController::class);
 });
 
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
