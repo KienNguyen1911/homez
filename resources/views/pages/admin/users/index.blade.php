@@ -29,7 +29,7 @@
                             </tr>
                         </thead>
                         <tbody class="t-body">
-                            @foreach ($userInfos as $userInfo)
+                            @forelse ($userInfos as $userInfo)
                                 <tr>
                                     <td class="vam">{{ $userInfo->name }}</td>
                                     <td class="vam">{{ $userInfo->email }}</td>
@@ -48,10 +48,14 @@
                                         </div>
                                     </td>
                                 </tr>
-                            @endforeach
+                            @empty  
+                                <tr>
+                                    <td colspan="7" class="text-center">No data</td>
+                                </tr>
+                            @endforelse
                         </tbody>
                     </table>
-                    {{-- {{ $userInfos->links() }} --}}
+                    {{ $userInfos->links('pagination::default') }}
                 </div>
             </div>
         </div>

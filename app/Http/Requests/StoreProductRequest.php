@@ -27,7 +27,6 @@ class StoreProductRequest extends FormRequest
             'price' => 'required|numeric',
             'sale_price' => 'required|numeric',
             'main_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'images' => 'required',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'status' => 'required',
             'province_id' => 'required',
