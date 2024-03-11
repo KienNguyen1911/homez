@@ -65,6 +65,15 @@
             <a class="scrollToHome" href="#"><i class="fas fa-angle-up"></i></a>
         </div>
     </div>
+    <script>
+        (function(w, d, u) {
+            var s = d.createElement('script');
+            s.async = true;
+            s.src = u + '?' + (Date.now() / 60000 | 0);
+            var h = d.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s, h);
+        })(window, document, 'https://cdn.bitrix24.com/b28861487/crm/site_button/loader_2_uoqlf2.js');
+    </script>
     <!-- Wrapper End -->
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>

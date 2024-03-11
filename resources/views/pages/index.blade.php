@@ -977,8 +977,8 @@ $(document).ready(function() {
                     // append to select
                     $('#district_id').empty();
                     // $('#district_id').append('<option value="">Please select district</option>');
-                    $('#district_id').append(
-                        '<option value="">Please select district</option>');
+                    // $('#district_id').append(
+                    //     '<option value="">Please select district</option>');
                     $.each(data, function(key, value) {
                         $('#district_id').append(
                             '<option value="' + value.id + '">' + value
