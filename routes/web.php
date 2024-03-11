@@ -44,9 +44,3 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/get-districts/{id}', [ProductController::class, 'getDistricts'])->name('get-districts');
 Route::get('/get-wards/{id}', [ProductController::class, 'getWards'])->name('get-wards');
 Route::post('/user-info', [UserInfoController::class, 'store'])->name('user-info');
-
-Route::get('/send-mail', function () {
-    $userInfo = UserInfo::find(1);
-
-    return Mail::to('ngkien1911@gmail.com')->send(new NewUserRegistered($userInfo));
-})->name('send-mail');
