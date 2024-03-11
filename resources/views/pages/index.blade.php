@@ -417,8 +417,7 @@
             <div class="row wow fadeInUp" data-wow-delay="00ms">
                 <div class="col-lg-9">
                     <div class="main-title2">
-                        <h2 class="title">Discover Popular Properties</h2>
-                        <p class="paragraph">Aliquam lacinia diam quis lacus euismod</p>
+                        <h2 class="title">Dự án tiêu biểu</h2>
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -428,7 +427,7 @@
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-home" type="button" role="tab"
-                                    aria-controls="pills-home" aria-selected="true">For Rent</button>
+                                    aria-controls="pills-home" aria-selected="true">Cho thuê</button>
                             </li>
                         </ul>
                     </div>
@@ -446,7 +445,7 @@
                                             <div class="list-thumb">
                                                 <img class="w-100" style="height: 250px; object-fit: cover" src="{{ asset($product->main_image) }}" alt="">
                                                 <div class="list-tag fz12"><span
-                                                        class="flaticon-electricity me-2"></span>FEATURED</div>
+                                                        class="flaticon-electricity me-2"></span>ĐẶC SẮC</div>
                                                 <div class="list-meta2">
                                                     <a href="#"><span class="flaticon-like"></span></a>
                                                     <a href="#"><span class="flaticon-new-tab"></span></a>
@@ -455,8 +454,8 @@
                                             </div>
                                             <div class="list-content">
                                                 <div class="list-price mb-2">VND {{number_format($product->sale_price)}} / <span>mo</span></div>
-                                                <h6 class="list-title"><a href="">
-                                                    {{ $product->name }} 
+                                                <h6 class="list-title"><a href="#form-info" class="product-name">
+                                                    {{ $product->name }}
                                                 </a></h6>
                                                 <p class="list-text">
                                                     {{ $product->province->name }}, {{ $product->district->name }}, {{ $product->ward->name }}
@@ -483,6 +482,8 @@
             </div>
         </div>
     </section>
+
+    @include('components.services')
 
     <!-- Explore Apartment -->
     {{-- <section class="pb30-md bgc-dark">
@@ -627,7 +628,7 @@
     </section> --}}
 
     <!-- Why Chose Us -->
-    <section>
+    {{-- <section>
         <div class="container">
             <div class="row align-items-md-center wow fadeInRight" data-wow-delay="300ms">
                 <div class="col-md-6 col-lg-6">
@@ -679,179 +680,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <!-- Explore Apartment -->
-    <section class="pb30-md bgc-f7">
-        <div class="container">
-            <div class="row align-items-md-center">
-                <div class="col-lg-6 mb30-md wow fadeInUp" data-wow-delay="100ms">
-                    <div class="main-title">
-                        <h2 class="title">People Love Living with Realton</h2>
-                        <p class="paragraph">Aliquam lacinia diam quis lacus euismod</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-lg-4">
-                            <div class="funfact_one">
-                                <div class="details">
-                                    <ul class="ps-0 d-flex mb-0">
-                                        <li>
-                                            <div class="timer">80</div>
-                                        </li>
-                                        <li><span>%</span></li>
-                                    </ul>
-                                    <p class="text mb-0">Completed Property</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-4">
-                            <div class="funfact_one">
-                                <div class="details">
-                                    <ul class="ps-0 d-flex mb-0">
-                                        <li>
-                                            <div class="timer">99</div>
-                                        </li>
-                                        <li><span>%</span></li>
-                                    </ul>
-                                    <p class="text mb-0">Satisfied Customers</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-4">
-                            <div class="funfact_one">
-                                <div class="details">
-                                    <ul class="ps-0 d-flex mb-0">
-                                        <li>
-                                            <div class="timer">50</div>
-                                        </li>
-                                        <li><span>%</span></li>
-                                    </ul>
-                                    <p class="text mb-0">Home ownership</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-4 offset-xl-2">
-                    <div class="testimonial-slider2 navi_pagi_bottom_center slider-1-grid owl-carousel owl-theme wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="item">
-                            <div class="testimonial-style1 position-relative mb25">
-                                <div class="testimonial-content">
-                                    <h5 class="title">Great Work</h5>
-                                    <span class="icon fas fa-quote-left"></span>
-                                    <p class="text">“Amazing design, easy to customize and a design quality superlative
-                                        account on its cloud platform for the optimized performance. And we didn’t on our
-                                        original designs.”</p>
-                                    <div class="testimonial-review">
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a href="#"><i class="fas fa-star"></i></a>
-                                    </div>
-                                </div>
-                                <div class="thumb d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <img class="wa" src="images/testimonials/testimonial-1.png" alt="">
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Leslie Alexander</h6>
-                                        <p class="mb-0">Nintendo</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-style1 position-relative mb25">
-                                <div class="testimonial-content">
-                                    <h5 class="title">Great Work</h5>
-                                    <span class="icon fas fa-quote-left"></span>
-                                    <p class="text">“Amazing design, easy to customize and a design quality superlative
-                                        account on its cloud platform for the optimized performance. And we didn’t on our
-                                        original designs.”</p>
-                                    <div class="testimonial-review">
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a href="#"><i class="fas fa-star"></i></a>
-                                    </div>
-                                </div>
-                                <div class="thumb d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <img class="wa" src="images/testimonials/testimonial-2.png" alt="">
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Floyd Miles</h6>
-                                        <p class="mb-0">Bank of America</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-style1 position-relative mb25">
-                                <div class="testimonial-content">
-                                    <h5 class="title">Great Work</h5>
-                                    <span class="icon fas fa-quote-left"></span>
-                                    <p class="text">“Amazing design, easy to customize and a design quality superlative
-                                        account on its cloud platform for the optimized performance. And we didn’t on our
-                                        original designs.”</p>
-                                    <div class="testimonial-review">
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a href="#"><i class="fas fa-star"></i></a>
-                                    </div>
-                                </div>
-                                <div class="thumb d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <img class="wa" src="images/testimonials/testimonial-3.png"
-                                            alt="">
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Dianne Russell</h6>
-                                        <p class="mb-0">Facebook</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-style1 position-relative mb25">
-                                <div class="testimonial-content">
-                                    <h5 class="title">Great Work</h5>
-                                    <span class="icon fas fa-quote-left"></span>
-                                    <p class="text">“Amazing design, easy to customize and a design quality superlative
-                                        account on its cloud platform for the optimized performance. And we didn’t on our
-                                        original designs.”</p>
-                                    <div class="testimonial-review">
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a class="me-1" href="#"><i class="fas fa-star"></i></a>
-                                        <a href="#"><i class="fas fa-star"></i></a>
-                                    </div>
-                                </div>
-                                <div class="thumb d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <img class="wa" src="images/testimonials/testimonial-3.png"
-                                            alt="">
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Dianne Russell</h6>
-                                        <p class="mb-0">Facebook</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Testimonial -->
+    @include('components.testimonials')
 
-    <!-- Explore Apartment -->
+    <!-- Form User Registing -->
     @include('components.info-user')
 
     <!-- Explore Apartment -->
@@ -974,17 +808,12 @@ $(document).ready(function() {
                 type: "GET",
                 dataType: "json",
                 success: function(data) {
-                    // append to select
                     $('#district_id').empty();
-                    // $('#district_id').append('<option value="">Please select district</option>');
-                    // $('#district_id').append(
-                    //     '<option value="">Please select district</option>');
                     $.each(data, function(key, value) {
                         $('#district_id').append(
                             '<option value="' + value.id + '">' + value
                             .name + '</option>'
                         );
-                        // $('button[data-id="district_id"]').selectpicker('refresh');
                     });
                     $('#district_id').selectpicker('refresh');
 
@@ -994,6 +823,12 @@ $(document).ready(function() {
             $('#district_id').empty();
             $('#district_id').selectpicker('refresh');
         }
+    });
+
+    $('.product-name').on('click', function() {
+        $('html, body').animate({
+            scrollTop: $("#form-info").offset().top
+        }, 1000);
     });
 });
 </script>

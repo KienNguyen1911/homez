@@ -31,7 +31,7 @@ class UserInfoController extends Controller
             $data = $request->all();
             $userInfo = UserInfo::create($data);
             DB::commit();
-            toastr()->success('Create user info success');
+            toastr()->success('Cảm ơn bạn đã đăng ký');
 
             \Mail::to(config('mail.to.address'))->send(new NewUserRegistered($userInfo));
 
@@ -39,7 +39,7 @@ class UserInfoController extends Controller
         } catch (\Throwable $th) {
             DB::rollBack();
             Log::error($th->getMessage());
-            toastr()->error('Create user info failed');
+            toastr()->error('Có lỗi xảy ra, vui lòng thử lại sau.');
 
             return redirect()->back()->with('error', $th->getMessage());
         }
