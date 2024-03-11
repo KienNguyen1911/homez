@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\UserInfo;
+use App\Observers\UserInfoObserver;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 
