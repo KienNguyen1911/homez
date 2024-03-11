@@ -98,7 +98,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="mb30">
-                                    <label class="form-label fw600 dark-color">Min Size (Sq ft)</label>
+                                    <label class="form-label fw600 dark-color">Min Price</label>
                                     <input type="text" class="form-control" placeholder="VND 1.000.000" name="min_price"
                                         value="{{ old('min_price') }}">
                                 </div>

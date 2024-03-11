@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUserInfoRequest;
+use App\Mail\NewUserRegistered;
 use App\Models\UserInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -28,9 +29,11 @@ class UserInfoController extends Controller
         try {
             DB::beginTransaction();
             $data = $request->all();
-            UserInfo::create($data);
+            $userInfo = UserInfo::create($data);
             DB::commit();
             toastr()->success('Create user info success');
+
+            \Mail::to(config('mail.to.address'))->send(new NewUserRegistered($userInfo));
 
             return redirect()->route('home');
         } catch (\Throwable $th) {

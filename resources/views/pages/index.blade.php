@@ -965,7 +965,7 @@
 
 @push('scripts')
 <script>
-    $(document).ready(function() {
+$(document).ready(function() {
     $('#province_id').on('change', function() {
         var province_id = $(this).val();
         if (province_id) {
@@ -979,20 +979,20 @@
                     // $('#district_id').append('<option value="">Please select district</option>');
                     $('#district_id').append(
                         '<option value="">Please select district</option>');
-                    console.log(data);
                     $.each(data, function(key, value) {
                         $('#district_id').append(
                             '<option value="' + value.id + '">' + value
                             .name + '</option>'
                         );
-                        $('#district_id').selectpicker('refresh');
                         // $('button[data-id="district_id"]').selectpicker('refresh');
                     });
+                    $('#district_id').selectpicker('refresh');
 
                 }
             });
         } else {
             $('#district_id').empty();
+            $('#district_id').selectpicker('refresh');
         }
     });
 });
