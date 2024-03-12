@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords"
-        content="advanced search, agency, agent, classified, directory, house, listing, property, real estate, real estate agency, real estate agent, realestate, realtor, rental">
-    <meta name="description" content="Homez">
+        content="t-dolphin, T Dolphin Home, tìm nhà, t-dolphin home, tim nha cung ban">
+    <meta name="description" content="T Dolphin Home - Tìm nhà cùng bạn">
     <meta name="CreativeLayers" content="ATFN">
     <!-- css file -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -24,7 +24,7 @@
     <!-- Responsive stylesheet -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Title -->
-    <title>Homez | @yield('title')</title>
+    <title>T Dolphin Home</title>
     <!-- Favicon -->
     <link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
     <link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" />
@@ -72,7 +72,7 @@
             s.src = u + '?' + (Date.now() / 60000 | 0);
             var h = d.getElementsByTagName('script')[0];
             h.parentNode.insertBefore(s, h);
-        })(window, document, 'https://cdn.bitrix24.com/b28861487/crm/site_button/loader_2_uoqlf2.js');
+        })(window, document, 'https://cdn.bitrix24.com/b28873001/crm/site_button/loader_1_wrjqzp.js');
     </script>
     <!-- Wrapper End -->
     <script src="js/jquery-3.6.4.min.js"></script>

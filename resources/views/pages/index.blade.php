@@ -13,12 +13,13 @@
                             <h1>
                                 T-Dolphin
                             </h1>
+                            <p class="p0 m0 slogan" style="font-size: 18px">Tìm nhà cùng bạn</p>
                         </a>
                     </div>
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 element">
-                    <div class="home3-info">
-                        <div class="d-flex align-items-center justify-content-center gap-3">
+                    <div class="home3-info h-100">
+                        <div class="d-flex align-items-center justify-content-center gap-3 h-100">
                             <div class="icon-box">
                                 <a href="">
                                     <span class="flaticon-clock" style="font-size: 30px"></span>
@@ -26,14 +27,14 @@
                             </div>
                             <div class="info-content">
                                 <p class="mb-0">Working Hour</p>
-                                <p class="mb-0">09:00 - 21:00</p>
+                                <p class="mb-0">08:30 - 22:00</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 element">
-                    <div class="home3-info">
-                        <div class="d-flex align-items-center justify-content-center gap-3">
+                    <div class="home3-info h-100">
+                        <div class="d-flex align-items-center justify-content-center gap-3 h-100">
                             <div class="icon-box">
                                 <a href="">
                                     <span class="flaticon-smartphone" style="font-size: 30px"></span>
@@ -41,14 +42,14 @@
                             </div>
                             <div class="info-content">
                                 <p class="mb-0">0968.665.154</p>
-                                <p class="mb-0">info@t-dolphin.com</p>
+                                <p class="mb-0">tdolphinhome@gmail.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 element">
                     <div class="home3-info h-100">
-                        <div class="d-flex align-items-center justify-content-end gap-3">
+                        <div class="d-flex align-items-center justify-content-end gap-3 h-100">
                             <div class="icon-box">
                                 <a href="">
                                     <span class="fab fa-facebook-f" style="font-size: 30px"></span>
@@ -772,6 +773,22 @@
             .home3-logo {
                 display: flex;
                 justify-content: center;
+            }
+
+            .home3-logo h1 {
+                margin: 0;
+            }
+
+            .home3-logo .slogan {
+                padding-bottom: 16px !important;
+            }
+
+            .home3-info {
+                height: 100%;
+            }
+
+            .home3-info > div {
+                height: 100%;
             }
 
             .home3-info:last-child > div {

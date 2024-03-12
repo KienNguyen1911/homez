@@ -31,7 +31,7 @@
                     <div class="col-auto">
                         <div class="contact-info">
                             <p class="info-title dark-color">Nee Live Support?</p>
-                            <h6 class="info-mail dark-color"><a href="mailto:hi@homez.com">hi@homez.com</a>
+                            <h6 class="info-mail dark-color"><a href="mailto:hi@tdolphin.com">hi@tdolphin.com</a>
                             </h6>
                         </div>
                     </div>

@@ -108,13 +108,13 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'info@t-dolphin.com'),
-        'name' => env('MAIL_FROM_NAME', 'T-Dolphin'),
+        'address' => env('MAIL_FROM_ADDRESS', 'tdolphinhome@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'T Dolphin Home'),
     ],
 
     'to' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'ngkien1911@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'KN1911'),
+        'address' => env('MAIL_FROM_ADDRESS', 'tdolphinhome@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'T Dolphin Home'),
     ],
 
     /*

@@ -29,8 +29,8 @@ class NewUserRegistered extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: '[T-Dolphin] New User Registered',
-            from: 'info@t-dolphin.com',
+            subject: '[T Dolphin Home] New User Registered',
+            from: 'tdolphinhome@gmail.com',
         );
     }
 
@@ -49,7 +49,7 @@ class NewUserRegistered extends Mailable implements ShouldQueue
             view: 'mail.user.register',
             with: [
                 'userInfo' => $userInfo,
-                'name' => 'T-Dolphin',
+                'name' => 'T Dolphin Home',
             ],
         );
     }

@@ -496,7 +496,7 @@
                                                             cellspacing="0" align="center">
                                                             <tr>
                                                                 <td class="t15" style="width:160px;">
-                                                                   <h2>T-Dolphin</h1>
+                                                                   <h2>T Dolphin</h1>
                                                                 </td>
                                                             </tr>
                                                         </table>
