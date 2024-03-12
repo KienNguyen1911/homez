@@ -52,21 +52,21 @@
                             <div class="col-md-12">
                                 <div class="mb20">
                                     <label class="form-label fw600 dark-color">Họ và tên</label>
-                                    <input type="text" class="form-control" placeholder="Tên của bạn" name="name"
+                                    <input required type="text" class="form-control" placeholder="Tên của bạn" name="name"
                                         value="{{ old('name') }}">
                                 </div>
                             </div>
                             <div class="col-md-7">
                                 <div class="mb20">
                                     <label class="form-label fw600 dark-color">Email</label>
-                                    <input type="email" class="form-control" placeholder="info@t-dolphin.com"
+                                    <input required type="email" class="form-control" placeholder="info@t-dolphin.com"
                                         name="email" value="{{ old('email') }}">
                                 </div>
                             </div>
                             <div class="col-md-5">
                                 <div class="mb20">
                                     <label class="form-label fw600 dark-color">Số điện thoại</label>
-                                    <input type="text" class="form-control" placeholder="0912341234" name="phone"
+                                    <input required type="text" class="form-control" placeholder="0912341234" name="phone"
                                         value="{{ old('phone') }}">
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
                                 <div class="mb20">
                                     <label class="form-label fw600 dark-color">Tỉnh</label>
                                     <div class="bootselect-multiselect">
-                                        <select class="selectpicker" name="province_id" id="province_id">
+                                        <select class="selectpicker" name="province_id" id="province_id" required>
                                             <option value="">Chọn tỉnh</option>
                                             @forelse ($provinces as $province)
                                                 <option value="{{ $province->id }}"
@@ -91,7 +91,7 @@
                                 <div class="mb20">
                                     <label class="form-label fw600 dark-color">Quận/Huyện</label>
                                     <div class="bootselect-multiselect">
-                                        <select class="selectpicker" multiple name="district_ids[]" id="district_id">
+                                        <select class="selectpicker" multiple name="district_ids[]" id="district_id" required>
                                             <option value="">Chọn quận/huyện</option>
                                         </select>
                                     </div>
@@ -100,14 +100,14 @@
                             <div class="col-md-6">
                                 <div class="mb30">
                                     <label class="form-label fw600 dark-color">Giá tối thiểu</label>
-                                    <input type="text" class="form-control" placeholder="VND 1.000.000" name="min_price"
+                                    <input required type="text" class="form-control" placeholder="VND 1.000.000" name="min_price"
                                         value="{{ old('min_price') }}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb20">
                                     <label class="form-label fw600 dark-color">Giá tối đa</label>
-                                    <input type="text" class="form-control" placeholder="VND 10.000.000" name="max_price"
+                                    <input required type="text" class="form-control" placeholder="VND 10.000.000" name="max_price"
                                         value="{{ old('max_price') }}">
                                 </div>
                             </div>
