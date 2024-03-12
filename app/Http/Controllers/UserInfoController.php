@@ -31,11 +31,10 @@ class UserInfoController extends Controller
             $data = $request->all();
             $userInfo = UserInfo::create($data);
             DB::commit();
-            toastr()->success('Cảm ơn bạn đã đăng ký');
 
             \Mail::to(config('mail.to.address'))->send(new NewUserRegistered($userInfo));
 
-            return redirect()->route('home');
+            return redirect()->route('home')->with('success', 'Cảm ơn bạn đã đăng ký');
         } catch (\Throwable $th) {
             DB::rollBack();
             Log::error($th->getMessage());
