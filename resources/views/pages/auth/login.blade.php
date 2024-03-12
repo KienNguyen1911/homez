@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="advanced search, agency, agent, classified, directory, house, listing, property, real estate, real estate agency, real estate agent, realestate, realtor, rental">
-<meta name="description" content="Homez - Real Estate HTML Template">
+<meta name="description" content="T Dolphin Home - Tìm nhà cùng bạn">
 <meta name="CreativeLayers" content="ATFN">
 <!-- css file -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -22,7 +22,7 @@
 <!-- Responsive stylesheet -->
 <link rel="stylesheet" href="css/responsive.css">
 <!-- Title -->
-<title>Homez - Real Estate HTML Template</title>
+<title>T Dolphin Home</title>
 <!-- Favicon -->
 <link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
 <link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" />

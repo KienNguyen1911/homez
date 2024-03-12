@@ -4,7 +4,7 @@
             <div class="col-sm-5">
                 <div class="footer-widget text-center text-sm-start">
                     {{-- <a class="footer-logo" href=""><img src="images/header-logo.svg" alt=""></a> --}}
-                    <h1 class="text-white">T-Dolphin</h1>
+                    <h1 class="text-white">T Dolphin</h1>
                 </div>
             </div>
             <div class="col-sm-7">
