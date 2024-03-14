@@ -153,10 +153,10 @@
                 <div class="col-6 col-lg-auto">
                     <div class="text-center text-lg-end header_right_widgets">
                         <ul class="mb0 d-flex justify-content-center justify-content-sm-end p-0">
-                            <li class="d-none d-sm-block"><a class="text-center mr15"
+                            {{-- <li class="d-none d-sm-block"><a class="text-center mr15"
                                     href="#"><span class="flaticon-email"></span></a></li>
                             <li class="d-none d-sm-block"><a class="text-center mr20 notif"
-                                    href="#"><span class="flaticon-bell"></span></a></li>
+                                    href="#"><span class="flaticon-bell"></span></a></li> --}}
                             <li class=" user_setting">
                                 <div class="dropdown">
                                     <a class="btn" href="#" data-bs-toggle="dropdown">

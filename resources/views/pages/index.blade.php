@@ -441,17 +441,17 @@
                             aria-labelledby="pills-home-tab">
                             <div class="row">
                                 @forelse ($products as $product)
-                                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                                    <div class="col-sm-6 col-lg-4 col-xl-3 product-name">
                                         <div class="listing-style5">
                                             <div class="list-thumb">
                                                 <img class="w-100" style="height: 250px; object-fit: cover" src="{{ asset($product->main_image) }}" alt="">
                                                 <div class="list-tag fz12"><span
                                                         class="flaticon-electricity me-2"></span>ĐẶC SẮC</div>
-                                                <div class="list-meta2">
+                                                {{-- <div class="list-meta2">
                                                     <a href="#"><span class="flaticon-like"></span></a>
                                                     <a href="#"><span class="flaticon-new-tab"></span></a>
                                                     <a href="#"><span class="flaticon-fullscreen"></span></a>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                             <div class="list-content">
                                                 <div class="list-price mb-2">VND {{number_format($product->sale_price)}} / <span>mo</span></div>
@@ -461,11 +461,11 @@
                                                 <p class="list-text">
                                                     {{ $product->province->name }}, {{ $product->district->name }}, {{ $product->ward->name }}
                                                 </p>
-                                                <div class="list-meta d-flex align-items-center">
+                                                {{-- <div class="list-meta d-flex align-items-center">
                                                     <a href="#"><span class="flaticon-bed"></span>3 bed</a>
                                                     <a href="#"><span class="flaticon-shower"></span>4 bath</a>
                                                     <a href="#"><span class="flaticon-expand"></span>1200 sqft</a>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -685,6 +685,8 @@
 
     <!-- Testimonial -->
     @include('components.testimonials')
+
+    @include('components.customers')
 
     <!-- Form User Registing -->
     @include('components.info-user')
