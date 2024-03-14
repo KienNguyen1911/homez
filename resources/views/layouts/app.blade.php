@@ -40,7 +40,7 @@
 
 <body>
     <div class="wrapper ovh">
-        <div class="preloader"></div>
+        {{-- <div class="preloader"></div> --}}
         {{-- @include('layouts.header') --}}
         <!-- Signup Modal -->
         {{-- @include('components.modals.signup') --}}
