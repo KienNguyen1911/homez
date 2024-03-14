@@ -22,10 +22,10 @@
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Phone</th>
+                                <th scope="col">Province</th>
                                 <th scope="col">Address</th>
-                                <th scope="col">Address</th>
-                                <th scope="col">Note</th>
-                                <th scope="col">Action</th>
+                                <th scope="col" style="max-width: 200px">Note</th>
+                                <th scope="col" style="width: 120px">Date</th>
                             </tr>
                         </thead>
                         <tbody class="t-body">
@@ -36,8 +36,10 @@
                                     <td class="vam">{{ $userInfo->phone }}</td>
                                     <td class="vam">{{ $userInfo->province }}</td>
                                     <td class="vam">{{ $userInfo->districts }}</td>
-                                    <td class="vam">{{ $userInfo->note }}</td>
-                                    <td class="vam">
+                                    <td class="vam multiline-text" style="max-width: 200px;" data-bs-toggle="tooltip" title="{{ $userInfo->note ?? 'No Note' }}">
+                                        {{ $userInfo->note ?? 'No Note' }}</td>
+                                    <td class="vam" style="min-width: 160px">{{ $userInfo->date }}</td>
+                                    {{-- <td class="vam">
                                         <div class="d-flex">
                                             <a href="#" class="icon" data-bs-toggle="tooltip"
                                                 data-bs-placement="top" title="Edit"><span
@@ -46,9 +48,9 @@
                                                 data-bs-placement="top" title="Delete"><span
                                                     class="flaticon-bin"></span></a>
                                         </div>
-                                    </td>
+                                    </td> --}}
                                 </tr>
-                            @empty  
+                            @empty
                                 <tr>
                                     <td colspan="7" class="text-center">No data</td>
                                 </tr>
@@ -60,4 +62,13 @@
             </div>
         </div>
     </div>
+
+    <style>
+        .multiline-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            height: inherit;
+        }
+    </style>
 @endsection

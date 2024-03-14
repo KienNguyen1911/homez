@@ -1,22 +1,15 @@
 <div class="dashboard_sidebar_list">
-    <div class="sidebar_list_item">
+    {{-- <div class="sidebar_list_item">
         <a href="{{ route('admin.dashboard') }}"
             class="items-center
         @if (Route::currentRouteName() == 'admin.dashboard') -is-active @endif"><i
                 class="flaticon-discovery mr15"></i>Dashboard</a>
-    </div>
+    </div> --}}
     {{-- <div class="sidebar_list_item ">
         <a href="page-dashboard-message.html" class="items-center"><i
                 class="flaticon-chat-1 mr15"></i>Message</a>
     </div> --}}
     <p class="fz15 fw400 ff-heading mt30">MANAGE LISTINGS</p>
-    <div class="sidebar_list_item ">
-        <a href="{{ route('admin.products.create') }}"
-            class="items-center 
-        @if (Route::currentRouteName() == 'admin.products.create') -is-active @endif">
-            <i class="flaticon-new-tab mr15"></i>Add New
-            Property</a>
-    </div>
     <div class="sidebar_list_item ">
         <a href="{{ route('admin.products.index') }}"
             class="items-center
@@ -24,6 +17,13 @@
         "><i
                 class="flaticon-home mr15"></i>My
             Properties</a>
+    </div>
+    <div class="sidebar_list_item ">
+        <a href="{{ route('admin.products.create') }}"
+            class="items-center 
+        @if (Route::currentRouteName() == 'admin.products.create') -is-active @endif">
+            <i class="flaticon-new-tab mr15"></i>Add New
+            Property</a>
     </div>
     <div class="sidebar_list_item ">
         <a href="{{ route('admin.users.index') }}"
@@ -49,10 +49,10 @@
         <a href="page-dashboard-package.html" class="items-center"><i
                 class="flaticon-protection mr15"></i>My Package</a>
     </div> --}}
-    <div class="sidebar_list_item ">
+    {{-- <div class="sidebar_list_item ">
         <a href="" class="items-center"><i class="flaticon-user mr15"></i>My Profile</a>
-    </div>
+    </div> --}}
     <div class="sidebar_list_item ">
-        <a href="" class="items-center"><i class="flaticon-logout mr15"></i>Logout</a>
+        <a href="{{ route('logout') }}" class="items-center"><i class="flaticon-logout mr15"></i>Logout</a>
     </div>
 </div>

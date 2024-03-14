@@ -5,9 +5,10 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-6 col-lg-auto">
                     <div class="text-center text-lg-start d-flex align-items-center">
-                        <div class="dashboard_header_logo position-relative me-2 me-xl-5">
-                            <a href="{{ route('admin.dashboard') }}" class="logo"><img
-                                    src="{{ asset('./images/header-logo2.svg') }}" alt=""></a>
+                        <div class="dashboard_header_logo position-relative me-2 me-xl-5 text-center">
+                            {{-- <a href="{{ route('admin.dashboard') }}" class="logo"><img
+                                    src="{{ asset('./images/header-logo2.svg') }}" alt=""></a> --}}
+                                <h1>T Dolphin</h1>
                         </div>
                         <div class="fz20 ms-2 ms-xl-5">
                             <a href="#" class="dashboard_sidebar_toggle_icon text-thm1 vam"><img
@@ -153,7 +154,7 @@
                     <div class="text-center text-lg-end header_right_widgets">
                         <ul class="mb0 d-flex justify-content-center justify-content-sm-end p-0">
                             <li class="d-none d-sm-block"><a class="text-center mr15"
-                                    href=""><span class="flaticon-email"></span></a></li>
+                                    href="#"><span class="flaticon-email"></span></a></li>
                             <li class="d-none d-sm-block"><a class="text-center mr20 notif"
                                     href="#"><span class="flaticon-bell"></span></a></li>
                             <li class=" user_setting">
@@ -163,17 +164,19 @@
                                     </a>
                                     <div class="dropdown-menu">
                                         <div class="user_setting_content">
-                                            <p class="fz15 fw400 ff-heading mb20">MAIN</p>
-                                            <a class="dropdown-item active" href=""><i
-                                                    class="flaticon-discovery mr10"></i>Dashboard</a>
-                                            <a class="dropdown-item" href=""><i
-                                                    class="flaticon-chat-1 mr10"></i>Message</a>
+                                            {{-- <p class="fz15 fw400 ff-heading mb20">MAIN</p> --}}
+                                            {{-- <a class="dropdown-item active" href=""><i
+                                                    class="flaticon-discovery mr10"></i>Dashboard</a> --}}
+                                            {{-- <a class="dropdown-item" href=""><i
+                                                    class="flaticon-chat-1 mr10"></i>Message</a> --}}
                                             <p class="fz15 fw400 ff-heading mt30">MANAGE LISTINGS</p>
-                                            <a class="dropdown-item"
+                                            <a class="dropdown-item @if (Route::currentRouteName() == 'admin.products.create') -is-active @endif"
                                                 href="{{ route('admin.products.create') }}"><i
                                                     class="flaticon-new-tab mr10"></i>Add New Property</a>
-                                            <a class="dropdown-item" href="{{ route('admin.products.index') }}"><i
+                                            <a class="dropdown-item @if (Route::currentRouteName() == 'admin.products.index') -is-active @endif" href="{{ route('admin.products.index') }}"><i
                                                     class="flaticon-home mr10"></i>My Properties</a>
+                                            <a class="dropdown-item @if (Route::currentRouteName() == 'admin.users.index') -is-active @endif" href="{{ route('admin.users.index') }}" >
+                                                <i class="flaticon-home mr10"></i>Registed User</a>
                                             {{-- <a class="dropdown-item" href="page-dashboard-favorites.html"><i
                                                     class="flaticon-like mr10"></i>My Favorites</a>
                                             <a class="dropdown-item" href="page-dashboard-savesearch.html"><i
@@ -183,8 +186,8 @@
                                             <p class="fz15 fw400 ff-heading mt30">MANAGE ACCOUNT</p>
                                             {{-- <a class="dropdown-item" href="page-dashboard-package.html"><i
                                                     class="flaticon-protection mr10"></i>My Package</a> --}}
-                                            <a class="dropdown-item" href=""><i
-                                                    class="flaticon-user mr10"></i>My Profile</a>
+                                            {{-- <a class="dropdown-item" href=""><i
+                                                    class="flaticon-user mr10"></i>My Profile</a> --}}
                                             <a class="dropdown-item" href="{{ route('logout') }}"><i
                                                     class="flaticon-exit mr10"></i>Logout</a>
                                         </div>

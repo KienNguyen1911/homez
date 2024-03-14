@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreUserInfoRequest;
 use App\Mail\NewUserRegistered;
 use App\Models\UserInfo;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -13,12 +14,13 @@ class UserInfoController extends Controller
 {
     public function index()
     {
-        $userInfos = UserInfo::query()->orderBy('created_at', 'desc')->paginate(20);
+        $userInfos = UserInfo::query()->orderBy('created_at', 'desc')->paginate(15);
         foreach ($userInfos as $item) {
             $item->province = \Kjmtrue\VietnamZone\Models\Province::find($item->province_id)->name;
             $districts = \Kjmtrue\VietnamZone\Models\District::whereIn('id', $item->district_ids)->get();
             $districts->pluck('name');
             $item->districts = $districts->implode('name', ', ');
+            $item->date = Carbon::parse($item->created_at)->format('Y-m-d');
         }
 
         return view('pages.admin.users.index', compact('userInfos'));
