@@ -51,7 +51,7 @@
                     <div class="home3-info h-100">
                         <div class="d-flex align-items-center justify-content-end gap-3 h-100">
                             <div class="icon-box">
-                                <a href="">
+                                <a href="https://www.facebook.com/profile.php?id=61553014700164&locale=vi_VN" target="_blank">
                                     <span class="fab fa-facebook-f" style="font-size: 30px"></span>
                                 </a>
                             </div>

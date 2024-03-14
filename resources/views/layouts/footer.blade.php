@@ -10,11 +10,11 @@
             <div class="col-sm-7">
                 <div class="social-widget text-center text-sm-end">
                     <div class="social-style1">
-                        <a class="text-white me-2 fw600 fz15" href="#">Follow us</a>
-                        <a href="#"><i class="fab fa-facebook-f list-inline-item"></i></a>
-                        <a href="#"><i class="fab fa-twitter list-inline-item"></i></a>
+                        <a class="text-white me-2 fw600 fz15" href="https://www.facebook.com/profile.php?id=61553014700164&locale=vi_VN">Follow us</a>
+                        <a href="https://www.facebook.com/profile.php?id=61553014700164&locale=vi_VN" target="_blank"><i class="fab fa-facebook-f list-inline-item"></i></a>
+                        {{-- <a href="#"><i class="fab fa-twitter list-inline-item"></i></a>
                         <a href="#"><i class="fab fa-instagram list-inline-item"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in list-inline-item"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in list-inline-item"></i></a> --}}
                     </div>
                 </div>
             </div>

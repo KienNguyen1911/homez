@@ -21,7 +21,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
             toastr()->success('Login successfully');
 
-            return redirect()->intended('admin/dashboard');
+            return redirect()->intended('admin/products');
         }
  
         toastr()->error('Login failed, please check your email and password again.');

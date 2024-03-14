@@ -51,7 +51,8 @@
           <div class="col-lg-6">
             <div class="log-reg-form signup-modal form-style1 bgc-white p50 p30-sm default-box-shadow2 bdrs12">
               <div class="text-center mb40">
-                <img class="mb25" src="images/header-logo2.svg" alt="">
+                {{-- <img class="mb25" src="images/header-logo2.svg" alt=""> --}}
+                <h1 class="border-bottom ">T Dolphin Home</h1>
                 <h2>Sign in</h2>
                 <p class="text">Sign in with this account across the following sites.</p>
               </div>
@@ -63,7 +64,7 @@
                 </div>
                 <div class="mb15">
                   <label class="form-label fw600 dark-color">Password</label>
-                  <input type="text" class="form-control" name="password" placeholder="Enter Password">
+                  <input type="password" class="form-control" name="password" placeholder="Enter Password">
                 </div>
                 {{-- <div class="checkbox-style1 d-block d-sm-flex align-items-center justify-content-between mb10">
                   <label class="custom_checkbox fz14 ff-heading">Remember me
@@ -86,7 +87,7 @@
               <div class="d-grid mb20">
                 <button class="ud-btn btn-apple fw400" type="button"><i class="fab fa-apple"></i> Continue Apple</button>
               </div> --}}
-              <p class="dark-color text-center mb0 mt10">Not signed up? <a class="dark-color fw600" href="">Create an account.</a></p>
+              {{-- <p class="dark-color text-center mb0 mt10">Not signed up? <a class="dark-color fw600" href="">Create an account.</a></p> --}}
             </div>
           </div>
         </div>
