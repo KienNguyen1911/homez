@@ -21,7 +21,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/login', function () {
-    return view('pages.auth.login');
+    if (!Auth::check()) {
+        return view('pages.auth.login');
+    } else {
+        return redirect('/admin/products');
+    }
 });
 
 Route::name('admin.')->prefix('admin')->middleware(['auth', 'auth.session'])->group(function () {

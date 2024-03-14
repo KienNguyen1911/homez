@@ -454,12 +454,12 @@
                                                 </div> --}}
                                             </div>
                                             <div class="list-content">
-                                                <div class="list-price mb-2">VND {{number_format($product->sale_price)}} / <span>mo</span></div>
+                                                {{-- <div class="list-price mb-2">VND {{number_format($product->sale_price)}} / <span>mo</span></div> --}}
                                                 <h6 class="list-title"><a href="#form-info" class="product-name">
-                                                    {{ $product->name }}
+                                                    {{ $product->province->name }}
                                                 </a></h6>
                                                 <p class="list-text">
-                                                    {{ $product->province->name }}, {{ $product->district->name }}, {{ $product->ward->name }}
+                                                    {{ $product->district->name }}, {{ $product->ward->name }}
                                                 </p>
                                                 {{-- <div class="list-meta d-flex align-items-center">
                                                     <a href="#"><span class="flaticon-bed"></span>3 bed</a>

@@ -360,7 +360,7 @@
                         $('.profile-box').html(
                             '<div class="profile-img position-relative overflow-hidden bdrs12 mb20-sm">' +
                             '<img src="' + e.target.result +
-                            '" alt="" style="width:250px; height:250px; object-fit:cover">' +
+                            '" alt="" style="width:400px; height:400px; object-fit:cover">' +
                             '<a href="#" class="tag-del" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Delete Image" aria-label="Delete Item">' +
                             '<span class="fas fa-trash-can"></span>' +
                             '<span class="bg-white px-2 py-1 text-center rounded-3">Main</span>' +
